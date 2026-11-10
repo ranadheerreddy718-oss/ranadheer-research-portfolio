@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranadheer Vennam, Ph.D., Research Portfolio</title>
+<meta name="description" content="Ranadheer Reddy Vennam, PhD. Crop stress physiologist: heat and drought in the reproductive window, drone phenotyping, and the economics of crop stress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* One visual world: a field at dusk. Soil-dark ground, canopy greens, a heat-orange
+   that only ever means stress, straw for wilted tissue, and plot-flag orange tags.
+   Condensed display type for statements, serif for reading, mono for every measurement. */
+:root {
+  --soil: #0D1310;
+  --soil-2: #141C17;
+  --soil-3: #1B2620;
+  --line: #2C3A32;
+  --ink: #EAF0E6;
+  --ink-2: #B5C2B8;
+  --ink-3: #829287;
+  --leaf: #79C27F;
+  --leaf-deep: #2F7A4C;
+  --heat: #F0884A;
+  --straw: #E4CF94;
+  --flag: #FF6A2B;
+  --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --gutter: clamp(16px, 4vw, 56px);
+  --max: 1240px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--soil); color: var(--ink); font-family: var(--font-body); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--leaf); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--heat); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+i, em { font-style: italic; }
+button { font: inherit; color: inherit; }
+.mono { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.03em; }
+.num { font-variant-numeric: tabular-nums; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.muted { color: var(--ink-2); }
+.dim { color: var(--ink-3); }
+
+/* ---------- nav ---------- */
+.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--soil) 86%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand svg { flex: none; }
+.brand b { font-family: var(--font-display); font-stretch: 75%; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; font-size: 1.02rem; }
+.brand span { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-3); }
+.links { display: flex; gap: 4px; }
+.links a { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2); text-decoration: none; padding: 8px 10px; border-radius: 3px; }
+.links a:hover { color: var(--ink); background: var(--soil-2); }
+.links a[aria-current="page"] { color: var(--soil); background: var(--leaf); }
+.menu-btn { display: none; background: none; border: 1px solid var(--line); border-radius: 3px; padding: 8px 12px; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; }
+@media (max-width: 940px) {
+  .menu-btn { display: block; }
+  .links { position: absolute; top: 60px; left: 0; right: 0; flex-direction: column; background: var(--soil); border-bottom: 1px solid var(--line); padding: 8px var(--gutter) 16px; display: none; }
+  .links.open { display: flex; }
+  .links a { padding: 12px 8px; font-size: 0.8rem; }
+  .brand span { display: none; }
+}
+
+/* ---------- pages ---------- */
+.page { display: none; }
+.page.active { display: block; }
+.page.active .enter { animation: rise 0.7s cubic-bezier(.2,.7,.2,1) both; }
+.page.active .enter:nth-child(2) { animation-delay: 0.06s; }
+.page.active .enter:nth-child(3) { animation-delay: 0.12s; }
+.page.active .enter:nth-child(4) { animation-delay: 0.18s; }
+.page.active .enter:nth-child(5) { animation-delay: 0.24s; }
+@keyframes rise { from { opacity: 0.001; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .page.active .enter { animation: none; } html { scroll-behavior: auto; } }
+
+.page-head { padding: clamp(40px, 7vw, 88px) 0 clamp(28px, 4vw, 48px); border-bottom: 1px solid var(--line); }
+.kicker { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--heat); display: flex; align-items: center; gap: 10px; }
+.kicker::before { content: ""; width: 22px; height: 2px; background: var(--heat); }
+.page-head h1 { font-family: var(--font-display); font-weight: 800; font-stretch: 66%; text-transform: uppercase; font-size: clamp(2.8rem, 8vw, 6.2rem); line-height: 0.88; margin-top: 16px; }
+.page-head .lede { margin-top: 20px; max-width: 62ch; color: var(--ink-2); font-size: 1.1rem; }
+section.band { padding: clamp(48px, 7vw, 96px) 0; border-bottom: 1px solid var(--line); }
+.h2 { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; text-transform: uppercase; font-size: clamp(2rem, 4.8vw, 3.4rem); line-height: 0.95; }
+.h3 { font-family: var(--font-display); font-weight: 700; font-stretch: 85%; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.12; }
+.sec-intro { max-width: 62ch; color: var(--ink-2); margin-top: 14px; }
+
+/* ---------- home hero ---------- */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); background: radial-gradient(120% 80% at 70% 0%, #1F2E25 0%, var(--soil) 60%); }
+.hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 40px; align-items: start; padding-top: clamp(36px, 6vw, 72px); padding-bottom: 300px; pointer-events: none; }
+.hero-inner a, .hero-inner button { pointer-events: auto; }
+.hero h1 { font-family: var(--font-display); font-weight: 900; font-stretch: 62%; text-transform: uppercase; font-size: clamp(3.6rem, 11vw, 9rem); line-height: 0.82; letter-spacing: -0.005em; }
+.hero h1 .l2 { color: var(--leaf); }
+.hero h1 .phd { font-weight: 300; font-stretch: 100%; font-size: 0.3em; letter-spacing: 0.02em; color: var(--ink-2); vertical-align: top; margin-left: 0.08em; }
+.hero .role { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-2); margin-top: 18px; letter-spacing: 0.04em; }
+.hero .thesis { font-size: clamp(1.2rem, 2.1vw, 1.55rem); line-height: 1.38; max-width: 31ch; margin-top: 22px; }
+.hero .thesis b { color: var(--heat); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.btn { font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; text-decoration: none; padding: 12px 16px; border-radius: 3px; border: 1px solid var(--line); color: var(--ink); background: var(--soil-2); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.btn:hover { border-color: var(--leaf); color: var(--leaf); }
+.btn.primary { background: var(--leaf); color: var(--soil); border-color: var(--leaf); font-weight: 700; }
+.btn.primary:hover { background: var(--ink); border-color: var(--ink); color: var(--soil); }
+.polaroid { justify-self: end; width: min(300px, 100%); background: #F3F1E8; padding: 10px 10px 14px; transform: rotate(2.2deg); box-shadow: 0 24px 50px rgba(0,0,0,0.45); position: relative; margin-top: 10px; }
+.polaroid::before { content: ""; position: absolute; top: -12px; left: 50%; width: 90px; height: 24px; transform: translateX(-50%) rotate(-3deg); background: rgba(228, 207, 148, 0.75); }
+.polaroid img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 55% 30%; width: 100%; }
+.polaroid p { font-family: var(--font-mono); color: #3A4038; font-size: 0.7rem; margin-top: 10px; line-height: 1.4; }
+#canopy { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 340px; z-index: 1; touch-action: pan-y; cursor: crosshair; }
+.hud { position: absolute; z-index: 3; right: var(--gutter); bottom: 18px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; pointer-events: none; }
+.hud .tag { pointer-events: none; }
+.hint { position: absolute; z-index: 3; left: var(--gutter); bottom: 22px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink); background: color-mix(in srgb, var(--soil) 70%, transparent); padding: 6px 10px; border-radius: 3px; border: 1px solid var(--line); pointer-events: none; }
+.hint b { color: var(--heat); font-weight: 500; }
+@media (max-width: 600px) { .hint { bottom: 64px; right: var(--gutter); } .hud { left: var(--gutter); justify-content: flex-start; } }
+
+/* plot-flag tags */
+.tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; padding: 6px 12px 6px 10px; background: var(--soil-2); border: 1px solid var(--line); border-radius: 3px; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tag i { font-style: normal; width: 8px; height: 8px; border-radius: 50%; background: var(--leaf); }
+.tag.hot i { background: var(--heat); }
+
+/* stats as plot stakes */
+.stakes { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-bottom: 1px solid var(--line); }
+.stake { padding: 28px 20px 26px; border-right: 1px solid var(--line); position: relative; }
+.stake:last-child { border-right: 0; }
+.stake::before { content: ""; position: absolute; top: 0; left: 20px; width: 26px; height: 6px; background: var(--flag); clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%); }
+.stake .v { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; font-size: clamp(2.2rem, 4vw, 3.3rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.stake .k { margin-top: 8px; font-size: 0.92rem; line-height: 1.35; }
+.stake .s { margin-top: 6px; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-3); }
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: minmax(0, 1fr); padding-bottom: 320px; }
+  .polaroid { justify-self: start; width: 210px; transform: rotate(-1.5deg); }
+  .stakes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stake { border-bottom: 1px solid var(--line); }
+  .stake:nth-child(2n) { border-right: 0; }
+  .stake:last-child { grid-column: 1 / -1; border-bottom: 0; }
+}
+
+/* ---------- project cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.card { position: relative; display: flex; flex-direction: column; min-height: 420px; border-radius: 4px; overflow: hidden; text-decoration: none; color: var(--ink); background: var(--soil-2); border: 1px solid var(--line); isolation: isolate; }
+.card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 0.8s cubic-bezier(.2,.7,.2,1); }
+.card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(13,19,16,0.05) 20%, rgba(13,19,16,0.92) 72%); }
+.card:hover img { transform: scale(1.05); }
+.card .n { font-family: var(--font-display); font-weight: 900; font-stretch: 62%; font-size: 3.4rem; line-height: 1; padding: 16px 18px 0; color: var(--ink); text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
+.card .body { margin-top: auto; padding: 18px; }
+.card h3 { font-family: var(--font-display); font-weight: 700; font-stretch: 85%; font-size: 1.28rem; line-height: 1.15; }
+.card p { font-size: 0.9rem; color: var(--ink-2); margin-top: 8px; line-height: 1.45; }
+.card .go { font-family: var(--font-mono); font-size: 0.7rem; color: var(--leaf); margin-top: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+@media (max-width: 1000px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .cards { grid-template-columns: minmax(0, 1fr); } .card { min-height: 340px; } }
+
+.banner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center; padding: 30px; border: 1px solid var(--line); border-radius: 4px; background: linear-gradient(90deg, var(--soil-2), color-mix(in srgb, var(--heat) 14%, var(--soil-2))); }
+.banner h3 { font-family: var(--font-display); font-weight: 800; font-stretch: 75%; font-size: clamp(1.6rem, 3vw, 2.3rem); text-transform: uppercase; line-height: 1; }
+.banner p { color: var(--ink-2); margin-top: 8px; max-width: 60ch; }
+@media (max-width: 700px) { .banner { grid-template-columns: minmax(0, 1fr); } }
+
+.highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.hl { border-top: 2px solid var(--leaf); padding-top: 14px; }
+.hl .mono { color: var(--ink-3); }
+.hl h4 { font-family: var(--font-display); font-weight: 700; font-stretch: 85%; font-size: 1.2rem; margin-top: 6px; line-height: 1.2; }
+.hl p { color: var(--ink-2); font-size: 0.94rem; margin-top: 6px; }
+@media (max-width: 800px) { .highlights { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- window diagram ---------- */
+.window { border: 1px solid var(--line); background: var(--soil-2); overflow-x: auto; border-radius: 4px; margin-top: 32px; }
+.window-inner { min-width: 780px; padding: 18px 20px 20px; }
+.wgrid { display: grid; grid-template-columns: 210px repeat(5, minmax(0, 1fr)); row-gap: 10px; --a: calc(210px + (100% - 210px) * 2 / 5); --b: calc(210px + (100% - 210px) * 3 / 5);
+  background: linear-gradient(to right, transparent var(--a), var(--heat) var(--a), var(--heat) calc(var(--a) + 1px), rgba(240,136,74,0.12) calc(var(--a) + 1px), rgba(240,136,74,0.12) calc(var(--b) - 1px), var(--heat) calc(var(--b) - 1px), var(--heat) var(--b), transparent var(--b)); }
+.wgrid .stage { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); padding: 0 8px 10px; border-bottom: 1px solid var(--line); }
+.wgrid .stage.hot { color: var(--heat); }
+.wgrid .rl { grid-column: 1; font-size: 0.86rem; line-height: 1.3; padding-right: 14px; align-self: center; }
+.wgrid .rl .mono { display: block; color: var(--ink-3); font-size: 0.66rem; margin-top: 2px; }
+.band-bar { height: 30px; align-self: center; border-radius: 3px; background: var(--ink); color: var(--soil); font-family: var(--font-mono); font-size: 0.68rem; display: flex; align-items: center; padding: 0 8px; white-space: nowrap; overflow: hidden; margin: 0 2px; text-decoration: none; }
+.band-bar.pn { background: var(--leaf); }
+.band-bar.ghost { background: transparent; color: var(--ink-2); border: 1px dashed var(--line); }
+.band-bar:hover { filter: brightness(1.1); }
+.wfoot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 14px; color: var(--ink-3); }
+.key { display: flex; gap: 16px; flex-wrap: wrap; }
+.key i { display: inline-block; width: 14px; height: 10px; margin-right: 6px; vertical-align: middle; border-radius: 2px; }
+
+/* ---------- project page ---------- */
+.proj-hero { position: relative; min-height: 460px; display: flex; align-items: flex-end; overflow: hidden; border-bottom: 1px solid var(--line); isolation: isolate; }
+.proj-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.proj-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(13,19,16,0.25) 0%, rgba(13,19,16,0.55) 45%, var(--soil) 100%); }
+.proj-hero .wrap { width: 100%; padding-top: 80px; padding-bottom: 36px; }
+.proj-hero .big { font-family: var(--font-display); font-weight: 900; font-stretch: 62%; font-size: clamp(4rem, 12vw, 9rem); line-height: 0.8; color: var(--leaf); }
+.proj-hero h1 { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; text-transform: uppercase; font-size: clamp(2.2rem, 5.5vw, 4.4rem); line-height: 0.92; max-width: 18ch; margin-top: 10px; }
+.proj-hero .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.proj-body { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); padding: clamp(40px, 6vw, 72px) 0; }
+.proj-body .q { font-style: italic; font-size: 1.25rem; line-height: 1.45; color: var(--ink); border-left: 3px solid var(--heat); padding-left: 16px; }
+.proj-body h4 { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); margin: 28px 0 8px; }
+.proj-body p { color: var(--ink-2); max-width: 64ch; }
+.papers { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.papers a, .papers span { font-family: var(--font-mono); font-size: 0.74rem; }
+.findings { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; align-content: start; }
+.findings li { display: grid; grid-template-columns: 8.4rem minmax(0, 1fr); gap: 16px; align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); }
+.findings li:first-child { border-top: 2px solid var(--ink); }
+.findings .fig { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.findings .fig.hot { color: var(--heat); }
+.findings .fig.ok { color: var(--leaf); }
+.findings .t { font-size: 0.96rem; color: var(--ink-2); line-height: 1.45; }
+.candor { margin-top: 24px; padding: 16px 18px; border: 1px dashed var(--line); border-radius: 4px; font-size: 0.94rem; color: var(--ink-2); }
+.candor b { color: var(--straw); font-weight: 600; }
+.paper-fig { margin: 32px 0 0; }
+.paper-fig .frame { background: #fff; border-radius: 4px; overflow: hidden; }
+.paper-fig .frame.dark { background: #000; }
+.paper-fig figcaption { font-size: 0.84rem; color: var(--ink-3); margin-top: 10px; line-height: 1.45; }
+.paper-fig figcaption b { color: var(--ink-2); font-weight: 600; }
+.pager { display: flex; justify-content: space-between; gap: 16px; padding: 28px 0 56px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.pager a { text-decoration: none; color: var(--ink); display: flex; flex-direction: column; gap: 4px; max-width: 45%; }
+.pager a .mono { color: var(--ink-3); }
+.pager a b { font-family: var(--font-display); font-stretch: 85%; font-weight: 700; font-size: 1.1rem; }
+.pager a:hover b { color: var(--leaf); }
+.pager a.next { text-align: right; margin-left: auto; }
+@media (max-width: 860px) { .proj-body { grid-template-columns: minmax(0, 1fr); } .findings li { grid-template-columns: 7rem minmax(0, 1fr); } .findings .fig { font-size: 1.6rem; } .pager a { max-width: 100%; } }
+
+/* strip galleries */
+.strip { display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.strip button { padding: 0; border: 0; background: none; cursor: zoom-in; text-align: left; }
+.strip .ph { aspect-ratio: 3 / 4; overflow: hidden; border-radius: 3px; background: var(--soil-2); }
+.strip img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.strip button:hover img { transform: scale(1.04); }
+.strip .cap { font-size: 0.8rem; color: var(--ink-3); margin-top: 8px; line-height: 1.4; }
+.era { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-3); display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.era::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- season simulator ---------- */
+.sim { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--soil-2); margin-top: 32px; }
+.sim-stage { position: relative; background: linear-gradient(180deg, #1A2A32 0%, #233A3F 55%, #3A2E22 55.2%, #2A2118 100%); min-height: 420px; }
+.sim-stage canvas { display: block; width: 100%; height: 100%; position: absolute; inset: 0; }
+.sim-side { padding: 22px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.seg button { background: transparent; border: 0; padding: 10px 14px; font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; color: var(--ink-2); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--soil); font-weight: 700; }
+.seg button.hotsel[aria-pressed="true"] { background: var(--heat); color: var(--soil); }
+.daybox { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.daybox .d { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.daybox .st { font-family: var(--font-mono); font-size: 0.74rem; color: var(--leaf); text-align: right; }
+.daybox .st.hot { color: var(--heat); }
+.meter { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; }
+.meter .lab { font-size: 0.86rem; color: var(--ink-2); }
+.meter .val { font-family: var(--font-mono); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.meter .bar { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--soil-3); overflow: hidden; }
+.meter .bar span { display: block; height: 100%; width: 0; background: var(--leaf); border-radius: 4px; transition: width 0.15s linear, background 0.2s; }
+.meter .bar span.hot { background: var(--heat); }
+.sim-controls { grid-column: 1 / -1; display: flex; align-items: center; gap: 16px; padding: 16px 22px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.sim-controls input[type=range] { flex: 1; min-width: 200px; accent-color: var(--leaf); height: 28px; }
+.timeline { grid-column: 1 / -1; position: relative; height: 54px; margin: 0 22px 16px; }
+.timeline .tl { position: absolute; top: 0; height: 100%; border-left: 1px solid var(--line); padding-left: 6px; font-family: var(--font-mono); font-size: 0.62rem; color: var(--ink-3); white-space: nowrap; }
+.timeline .win { position: absolute; top: 0; height: 6px; background: var(--heat); border-radius: 3px; opacity: 0.85; }
+.sim-note { font-size: 0.84rem; color: var(--ink-3); margin-top: 14px; max-width: 80ch; }
+@media (max-width: 860px) { .sim { grid-template-columns: minmax(0, 1fr); } .sim-side { border-left: 0; border-top: 1px solid var(--line); } .sim-stage { min-height: 320px; } .timeline .tl:nth-child(odd) { display: none; } .timeline .tl { top: 12px !important; } }
+
+/* ---------- charts ---------- */
+.chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
+.panel { border: 1px solid var(--line); border-radius: 6px; background: var(--soil-2); padding: 22px; }
+.panel.wide { grid-column: 1 / -1; }
+.panel h3 { font-family: var(--font-display); font-weight: 700; font-stretch: 88%; font-size: 1.2rem; }
+.panel .sub { color: var(--ink-3); font-size: 0.86rem; margin-top: 4px; }
+.panel .top { display: flex; justify-content: space-between; align-items: start; gap: 12px; flex-wrap: wrap; }
+.bars { margin-top: 18px; display: grid; gap: 6px; }
+.brow { display: grid; grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.6fr); gap: 14px; align-items: center; padding: 6px 6px; border-radius: 3px; }
+.brow:hover, .brow:focus { background: var(--soil-3); outline: none; }
+.brow .lbl { font-size: 0.86rem; line-height: 1.25; }
+.brow .lbl .mono { display: block; color: var(--ink-3); font-size: 0.64rem; margin-top: 2px; }
+.track { position: relative; height: 22px; }
+.track .ref { position: absolute; top: -4px; bottom: -4px; border-left: 1px dashed var(--ink-3); }
+.track .b { position: absolute; left: 0; top: 4px; height: 14px; width: 0; border-radius: 0 4px 4px 0; background: var(--leaf); transition: width 1.1s cubic-bezier(.2,.7,.2,1); }
+.track .b.c { background: repeating-linear-gradient(135deg, transparent 0 4px, rgba(121,194,127,0.45) 4px 5px); border: 2px solid var(--leaf); }
+.track .b.h { background: var(--heat); }
+.track .val { position: absolute; top: 2px; font-family: var(--font-mono); font-size: 0.72rem; white-space: nowrap; font-variant-numeric: tabular-nums; opacity: 0; transition: opacity 0.4s 0.8s; }
+.charts-on .track .val { opacity: 1; }
+.axis { display: grid; grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.6fr); gap: 14px; padding: 0 6px; margin-top: 4px; }
+.axis .ticks { position: relative; height: 18px; border-top: 1px solid var(--line); }
+.axis .ticks span { position: absolute; top: 3px; transform: translateX(-50%); font-family: var(--font-mono); font-size: 0.62rem; color: var(--ink-3); }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; color: var(--ink-3); font-family: var(--font-mono); font-size: 0.7rem; align-items: center; }
+.legend i { display: inline-block; width: 20px; height: 10px; margin-right: 6px; vertical-align: middle; border-radius: 0 3px 3px 0; background: var(--leaf); }
+.legend i.c { background: transparent; border: 2px solid var(--leaf); }
+.legend i.h { background: var(--heat); }
+.legend i.r { width: 0; height: 14px; border-left: 1px dashed var(--ink-3); background: none; border-radius: 0; }
+.cols-chart { display: flex; align-items: flex-end; gap: 28px; height: 240px; margin-top: 22px; padding: 0 6px; border-bottom: 1px solid var(--line); position: relative; }
+.cols-chart .grp { flex: 1; display: flex; flex-direction: column; align-items: stretch; height: 100%; }
+.cols-chart .pair { flex: 1; display: flex; align-items: flex-end; gap: 6px; justify-content: center; }
+.cols-chart .col { width: min(64px, 40%); background: var(--leaf); border-radius: 4px 4px 0 0; height: 0; position: relative; transition: height 1.1s cubic-bezier(.2,.7,.2,1); }
+.cols-chart .col.h { background: var(--heat); }
+.cols-chart .col span { position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 0.72rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.cols-chart .col em { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); font-style: normal; font-family: var(--font-mono); font-size: 0.66rem; color: var(--soil); font-weight: 700; white-space: nowrap; }
+.cols-x { display: flex; gap: 28px; padding: 8px 6px 0; }
+.cols-x span { flex: 1; text-align: center; font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-2); }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 32px; border-top: 1px solid var(--line); }
+.facts div { padding: 20px 18px 0 0; }
+.facts .v { font-family: var(--font-display); font-weight: 800; font-stretch: 70%; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.facts p { color: var(--ink-2); font-size: 0.92rem; margin-top: 8px; }
+@media (max-width: 860px) { .chart-grid { grid-template-columns: minmax(0, 1fr); } .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .facts div { padding-bottom: 18px; } .brow, .axis { grid-template-columns: minmax(0, 1fr); gap: 4px; } .axis .sp { display: none; } }
+
+/* ---------- publications ---------- */
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 28px; }
+.chip { font-family: var(--font-mono); font-size: 0.72rem; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: transparent; cursor: pointer; color: var(--ink-2); }
+.chip[aria-pressed="true"] { background: var(--leaf); color: var(--soil); border-color: var(--leaf); font-weight: 700; }
+.chip:hover { border-color: var(--leaf); }
+.search { flex: 1; min-width: 200px; max-width: 320px; margin-left: auto; background: var(--soil-2); border: 1px solid var(--line); border-radius: 3px; padding: 10px 12px; color: var(--ink); font-family: var(--font-mono); font-size: 0.78rem; }
+.count { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-3); margin-top: 16px; }
+.publist { list-style: none; margin: 10px 0 0; padding: 0; }
+.pub { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 18px; padding: 18px 0; border-top: 1px solid var(--line); align-items: baseline; }
+.pub .yr { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-3); }
+.pub .ti { font-family: var(--font-display); font-weight: 600; font-stretch: 90%; font-size: 1.1rem; line-height: 1.3; }
+.pub .au { font-size: 0.88rem; color: var(--ink-2); margin-top: 6px; }
+.pub .au b { color: var(--ink); font-weight: 600; }
+.pub .ve { font-size: 0.88rem; color: var(--ink-2); font-style: italic; }
+.pub .lk { font-family: var(--font-mono); font-size: 0.7rem; display: inline-block; margin-top: 6px; }
+.pills { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.pill { font-family: var(--font-mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 3px; border: 1px solid var(--line); color: var(--ink-2); white-space: nowrap; }
+.pill.role { border-color: var(--leaf-deep); color: var(--leaf); }
+.pill.st { border-color: rgba(240,136,74,0.5); color: var(--heat); }
+@media (max-width: 700px) { .pub { grid-template-columns: minmax(0, 1fr); gap: 6px; } .pills { flex-direction: row; flex-wrap: wrap; align-items: flex-start; } .search { margin-left: 0; max-width: none; } }
+
+/* ---------- gallery ---------- */
+.masonry { columns: 4 240px; column-gap: 12px; margin-top: 24px; }
+.masonry button { display: block; width: 100%; margin: 0 0 12px; padding: 0; border: 0; background: var(--soil-2); border-radius: 4px; overflow: hidden; cursor: zoom-in; break-inside: avoid; position: relative; text-align: left; }
+.masonry img { width: 100%; height: auto; transition: transform 0.6s ease, filter 0.3s; }
+.masonry button:hover img { transform: scale(1.03); }
+.masonry .lab { position: absolute; left: 8px; top: 8px; font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; background: rgba(13,19,16,0.8); color: var(--ink); padding: 3px 7px; border-radius: 2px; }
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(6,9,7,0.94); display: none; grid-template-rows: auto minmax(0, 1fr) auto; padding: 16px var(--gutter); }
+.lightbox.open { display: grid; }
+.lb-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-2); }
+.lb-img { display: flex; align-items: center; justify-content: center; min-height: 0; padding: 12px 0; }
+.lb-img img { max-height: 100%; max-width: 100%; object-fit: contain; border-radius: 3px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.lb-bot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.lb-bot p { max-width: 70ch; font-size: 0.96rem; }
+.lb-bot p span { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-3); margin-top: 4px; }
+.lb-nav { display: flex; gap: 8px; }
+
+/* ---------- outreach ---------- */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 64px); }
+.ledger { list-style: none; margin: 14px 0 0; padding: 0; }
+.ledger li { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); font-size: 0.96rem; line-height: 1.45; color: var(--ink-2); }
+.ledger li .y { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-3); padding-top: 3px; }
+.ledger li b { color: var(--ink); font-weight: 600; }
+.subhead { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--heat); padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.aims { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.aim { border: 1px solid var(--line); border-radius: 4px; padding: 22px; background: var(--soil-2); }
+.aim .mono { color: var(--heat); }
+.aim h3 { font-family: var(--font-display); font-weight: 700; font-stretch: 85%; font-size: 1.3rem; margin: 8px 0 10px; line-height: 1.15; }
+.aim p { color: var(--ink-2); font-size: 0.95rem; }
+.methods { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.methods div { border-top: 2px solid var(--leaf); padding-top: 12px; }
+.methods h4 { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 8px; }
+.methods p { font-size: 0.92rem; color: var(--ink-2); }
+@media (max-width: 860px) { .two, .aims { grid-template-columns: minmax(0, 1fr); } .methods { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---------- contact ---------- */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: center; padding: clamp(40px, 6vw, 80px) 0; }
+.contact-grid img { border-radius: 4px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; width: 100%; }
+.contact-grid h2 { font-family: var(--font-display); font-weight: 900; font-stretch: 62%; text-transform: uppercase; font-size: clamp(3rem, 8vw, 6rem); line-height: 0.86; }
+.contact-grid dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 20px; margin: 28px 0 0; }
+.contact-grid dt { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); padding-top: 4px; }
+.contact-grid dd { margin: 0; word-break: break-word; }
+.copy-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 26px; }
+@media (max-width: 760px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } .contact-grid img { max-width: 320px; } }
+
+footer { padding: 28px 0 40px; color: var(--ink-3); }
+footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.7rem; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="Home">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 25V11" stroke="#79C27F" stroke-width="2" fill="none"/><path d="M13 15C8 15 4 12 3 6c5 0 9 3 10 9z" fill="#79C27F"/><path d="M13 12c1-6 5-9 10-9-1 6-5 9-10 9z" fill="#F0884A"/></svg>
+      <b>R. R. Vennam, Ph.D.</b><span>crop stress physiology</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="links" id="navLinks" aria-label="Pages">
+      <a href="#research" data-for="research">Research</a>
+      <a href="#season" data-for="season">Season simulator</a>
+      <a href="#impact" data-for="impact">Impact</a>
+      <a href="#publications" data-for="publications">Publications</a>
+      <a href="#gallery" data-for="gallery">Gallery</a>
+      <a href="#outreach" data-for="outreach">Outreach</a>
+      <a href="#contact" data-for="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- =================== HOME =================== -->
+<section class="page" id="p-home" data-page="home">
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="kicker enter">Crop stress physiologist · Ph.D., Virginia Tech</p>
+        <h1 class="enter">Ranadheer<br>Reddy <span class="l2">Vennam</span><span class="phd">, Ph.D.</span></h1>
+        <p class="role enter">Research Assistant · Tidewater Agricultural Research and Extension Center, Virginia Tech</p>
+        <p class="thesis enter">A season’s yield is decided in a few weeks around flowering. I study what <b>heat and drought</b> do in that window, what they cost growers, and how to see the damage from the air.</p>
+        <div class="cta enter">
+          <a class="btn primary" href="#research">Explore the research</a>
+          <a class="btn" href="#season">Run a stress season</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <figure class="polaroid enter" style="margin:10px 0 0">
+        <img src="img/phd/portrait-peanut-pods.jpg" alt="Ranadheer holding a freshly dug peanut plant covered in pods" width="900" height="1200">
+        <p>Checking pod set on a dug peanut plant · PhD field trials, Virginia</p>
+      </figure>
+    </div>
+    <canvas id="canopy" aria-label="Interactive canopy. Moving the pointer over the plants heats them and their leaves wilt; they recover when the pointer leaves." role="img"></canvas>
+    <p class="hint">Drag across the canopy to add <b>heat</b>. Leaves wilt, then recover.</p>
+    <div class="hud" aria-live="off">
+      <span class="tag hot"><i></i><span id="hudT">Canopy +0.0 °C</span></span>
+      <span class="tag"><i id="hudDot"></i><span id="hudW">Wilting score 0.0 / 5</span></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stakes" id="stakes">
+      <div class="stake"><div class="v" data-count="536">536</div><p class="k">citations</p><p class="s">Google Scholar · h-index 7 (OpenAlex)</p></div>
+      <div class="stake"><div class="v" data-count="14">14</div><p class="k">peer-reviewed papers, 8 as first author</p><p class="s">incl. 1 in press · 2 in revision</p></div>
+      <div class="stake"><div class="v">8 / 12</div><p class="k">indexed papers in the top 10% of their field</p><p class="s">field-weighted · OpenAlex</p></div>
+      <div class="stake"><div class="v" data-count="3190" data-prefix="~">~3,190</div><p class="k">drone-imaged plots in 12 environments</p><p class="s">3 locations · VA &amp; NC · 2023–25</p></div>
+      <div class="stake"><div class="v">$680–770</div><p class="k">per acre of crop value lost to heat plus drought</p><p class="s">peanut · 2024 &amp; 2025</p></div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">Four questions, asked in sequence</p>
+      <h2 class="h2" style="margin-top:12px">From when stress hits to what it costs</h2>
+      <div class="cards" id="homeCards"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="banner">
+        <div>
+          <p class="kicker">Interactive</p>
+          <h3 style="margin-top:10px">Put a peanut crop under the shelter</h3>
+          <p>Scrub through a season, switch between rainfed and heat plus drought, and watch canopy temperature, stomatal conductance, wilting, and yield move toward the values measured in my trials.</p>
+        </div>
+        <a class="btn primary" href="#season">Open the season simulator</a>
+      </div>
+      <div class="highlights">
+        <div class="hl"><p class="mono">2026 · Award</p><h4>Gerald O. Mott Award</h4><p>Crop Science Society of America.</p></div>
+        <div class="hl"><p class="mono">2026 · Attention</p><h4>3,639 accesses, Altmetric 78</h4><p>For my leaf-wilting review in <i>Discover Agriculture</i>, within ten months.</p></div>
+        <div class="hl"><p class="mono">2025 · Award</p><h4>Outstanding PhD Student</h4><p>Association of Agricultural Scientists of Indian Origin.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- =================== RESEARCH OVERVIEW =================== -->
+<section class="page" id="p-research" data-page="research">
+  <div class="wrap page-head">
+    <p class="kicker enter">Research · 2021–2026</p>
+    <h1 class="enter">Where each study sits in the crop’s life</h1>
+    <p class="lede enter">Most of my work targets the reproductive window, when pollen is shed, silks or pegs are fertilized, and the plant fixes how many seeds it will try to fill. Drought closes stomata to save water, which removes the plant’s main way to cool itself just as temperatures peak. Click a bar to open the study.</p>
+  </div>
+  <div class="wrap">
+    <div class="window enter" role="figure" aria-label="Timeline of crop growth stages with each study placed on the stages it covered">
+      <div class="window-inner">
+        <div class="wgrid">
+          <div class="stage" style="grid-column:1">Study</div>
+          <div class="stage" style="grid-column:2">Early vegetative</div>
+          <div class="stage" style="grid-column:3">Late vegetative</div>
+          <div class="stage hot" style="grid-column:4">Flowering · the window</div>
+          <div class="stage" style="grid-column:5">Seed / grain fill</div>
+          <div class="stage" style="grid-column:6">Maturity · harvest</div>
+          <div class="rl">Corn, 5 soil-moisture levels<span class="mono">Plants 2023</span></div>
+          <a class="band-bar" href="#corn-window" style="grid-column:2 / 3">V2–V7 · 28 days</a>
+          <div class="rl">Corn, 5 salinity levels<span class="mono">J. Agric. Food Res. 2024</span></div>
+          <a class="band-bar" href="#corn-window" style="grid-column:2 / 3">V2–V7 · 0–12 dS/m</a>
+          <div class="rl">Corn, 14-day deficit<span class="mono">Physiologia Plantarum 2023</span></div>
+          <a class="band-bar" href="#corn-window" style="grid-column:4 / 5">at flowering</a>
+          <a class="band-bar" href="#corn-window" style="grid-column:5 / 6">or at grain fill</a>
+          <div class="rl">Corn, 7-day drought + rewatering<span class="mono">J. Miss. Acad. Sci. 2024</span></div>
+          <a class="band-bar" href="#corn-window" style="grid-column:4 / 6">tassel · mid-silk · blister</a>
+          <div class="rl">Peanut, rainout shelters<span class="mono">Peanut Science, in press</span></div>
+          <a class="band-bar pn" href="#stress-economics" style="grid-column:4 / 6">65–70 days · flowering to early seed fill</a>
+          <div class="rl">Peanut, yield, grade, value<span class="mono">Peanut Science · VCE SPES-672</span></div>
+          <a class="band-bar ghost" href="#stress-economics" style="grid-column:6 / 7">grade + $ per acre</a>
+        </div>
+        <div class="wfoot mono">
+          <span class="key"><span><i style="background:var(--ink)"></i>Corn (<em>Zea mays</em>), MS</span><span><i style="background:var(--leaf)"></i>Peanut (<em>Arachis hypogaea</em>), PhD</span><span><i style="background:rgba(240,136,74,0.25);border:1px solid var(--heat)"></i>Reproductive window</span></span>
+          <span>Stages are schematic and aligned across crops.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">The projects</p>
+      <h2 class="h2" style="margin-top:12px">Each answered a gap the last one exposed</h2>
+      <div class="cards" id="researchCards"></div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <p class="kicker">Next</p>
+      <h2 class="h2" style="margin-top:12px">From describing stress to anticipating it</h2>
+      <div class="aims">
+        <div class="aim"><span class="mono">Aim 1</span><h3>Predict stress before it costs yield</h3><p>Pair season-independent drone models with weather, soil-moisture data, and stage-specific response functions to warn growers and variety testers in-season, and test how the models transfer to new crops, sensors, and regions.</p></div>
+        <div class="aim"><span class="mono">Aim 2</span><h3>Breed for the combination</h3><p>Because tolerance to one stress does not predict tolerance to both, work with breeders to screen advanced lines under combined heat and drought, timed before stress erases genotype differences.</p></div>
+        <div class="aim"><span class="mono">Aim 3</span><h3>Connect mechanism to phenotype</h3><p>Link gene expression in stressed peanut leaves (dissertation chapter in preparation) to wilting, gas exchange, and reflectance, giving breeders traits they can select directly.</p></div>
+      </div>
+      <p class="sec-intro" style="margin-top:24px">Funding path: regional trials that growers and commodity boards ask for, then multi-state USDA NIFA proposals built on those data, with seed and ag-technology partners. Grant experience so far: helped my advisor develop a USDA Specialty Crop Research Initiative proposal on chickpea, and now plan and manage Virginia Tech’s field trials on a $2.7M, five-university USDA faba bean project.</p>
+      <div class="methods">
+        <div><h4>Physiology</h4><p>Leaf gas exchange, canopy and leaf temperature, relative water content, chlorophyll and photosystem II efficiency, pollen germination and silk development, leaf wilting scoring.</p></div>
+        <div><h4>Stress environments</h4><p>Rainout shelters, growth chambers, SPAR chambers (heat, drought, salt, chilling, elevated CO₂), soil-moisture and salinity dose-response designs.</p></div>
+        <div><h4>Sensing and data</h4><p>Drone multispectral and thermal imagery (FAA Part 107), vegetation indices, leaf reflectance, machine learning with leave-one-year-out validation.</p></div>
+        <div><h4>Field and economics</h4><p>Trial design and management, in-season monitoring, harvest and peanut grading, yield, crop value, and net-return analysis; soil sampling.</p></div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- =================== PROJECT 01 =================== -->
+<section class="page" id="p-corn-window" data-page="corn-window">
+  <div class="proj-hero">
+    <img src="img/ms/hoophouse-corn.jpg" alt="" style="object-position: 50% 35%">
+    <div class="wrap">
+      <div class="big enter">01</div>
+      <h1 class="enter">When does water stress do the most damage to corn?</h1>
+      <div class="meta enter"><span class="tag">MS · Mississippi State · 2021–2023</span><span class="tag">Corn · <em>Zea mays</em></span><span class="tag">Role: co-designed, ran, analyzed</span></div>
+    </div>
+  </div>
+  <div class="wrap proj-body">
+    <div>
+      <p class="q">Crop models and irrigation thresholds need yield expressed as a function of stress intensity at specific stages, not a single stressed-versus-control contrast.</p>
+      <h4>What I did</h4>
+      <p>I co-designed and ran a study of the dryland hybrid A6659 in 200 large pots of field soil, holding soil moisture at five levels (0.25 to 0.05 m³/m³) for 14 days at flowering or during grain fill, with 20 replications per level. I tracked ear-leaf gas exchange, reflectance indices, silk growth, and kernel set. Three further studies of my own added a seven-day drought with rewatering, and early-season response curves for water deficit and for salinity (two hybrids, two independent experiments each, 26 traits in the salinity study).</p>
+      <h4>Why it matters</h4>
+      <p>The stages fail by different routes: flowering stress acts on kernel number, while grain-fill losses trace to a declining ear leaf. The early-season curves are continuous, so they can go straight into crop models. The work is cited in studies of stage-targeted irrigation, satellite-based drought impact, and index-based corn insurance design.</p>
+      <div class="papers">
+        <a href="https://doi.org/10.1111/ppl.14029">Physiologia Plantarum 2023 · co-designed, ran, analyzed</a>
+        <a href="https://doi.org/10.3390/plants12132471">Plants 2023 · ran, analyzed</a>
+        <a href="https://doi.org/10.1016/j.jafr.2024.100994">J. Agric. Food Res. 2024 · ran, analyzed</a>
+        <a href="https://doi.org/10.34107/CTJP1687">J. Miss. Acad. Sci. 2024 · ran, analyzed</a>
+      </div>
+      <figure class="paper-fig">
+        <div class="frame dark"><img src="img/corn-soil-moisture.jpg" alt="Five young corn plants shrinking and browning from left to right as soil moisture falls" width="714" height="444"></div>
+        <figcaption><b>Early-season corn at five soil moisture levels.</b> Hybrid A6659VT2RIB after 28 days, from 0.15 (left) to 0.03 m³/m³ (right). From Vennam et al. 2023, <i>Plants</i> 12:2471, CC BY 4.0 (cropped).</figcaption>
+      </figure>
+    </div>
+    <ul class="findings">
+      <li><span class="fig hot">−53%</span><span class="t">kernel number after 14 days of drought at flowering; kernel weight fell 54%.</span></li>
+      <li><span class="fig hot">−46%</span><span class="t">leaf chlorophyll after just seven days of drought. Unlike canopy temperature, it did not recover after rewatering.</span></li>
+      <li><span class="fig">3 dS/m</span><span class="t">salinity tolerance threshold for early-season maize. At 12 dS/m, height fell 47% and canopy temperature rose about 4 °C.</span></li>
+      <li><span class="fig ok">0.22→0.52</span><span class="t">root-to-shoot ratio as the soil dried (R² = 0.90): plants shifted biomass toward roots.</span></li>
+      <li><span class="fig">−85%</span><span class="t">leaf area at the driest early-season level; shoot mass fell 74% and root mass 43%.</span></li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <p class="era">MS-era · Mississippi State, 2021–2023</p>
+    <div class="strip" data-photos="ms-corn" style="--n:6"></div>
+    <nav class="pager" aria-label="Project navigation"><a href="#research"><span class="mono">← All research</span><b>Overview</b></a><a class="next" href="#combined-stress"><span class="mono">Next project →</span><b>Heat plus drought, chamber to field</b></a></nav>
+  </div>
+</section>
+
+<!-- =================== PROJECT 02 =================== -->
+<section class="page" id="p-combined-stress" data-page="combined-stress">
+  <div class="proj-hero">
+    <img src="img/wilting-under-shelter.jpg" alt="" style="object-position: 50% 60%">
+    <div class="wrap">
+      <div class="big enter">02</div>
+      <h1 class="enter">Is heat plus drought just the sum of its parts?</h1>
+      <div class="meta enter"><span class="tag">MS collaborations · PhD · 2022–2026</span><span class="tag">Maize · soybean · peanut</span><span class="tag">Role varies by paper</span></div>
+    </div>
+  </div>
+  <div class="wrap proj-body">
+    <div>
+      <p class="q">Most breeding screens impose one stress at a time, in growth chambers. In the field, heat and drought arrive together. Do chamber screens hold up?</p>
+      <h4>What I did</h4>
+      <p>At Mississippi State I contributed to three collaborative studies on maize and soybean under combined stress. At Virginia Tech I designed paired experiments on five high-oleic Virginia-type peanut cultivars: growth chambers under control, heat, drought, and combined stress (100 experimental units), and the same cultivars in the field under rainfed conditions or rainout shelters (40 plots). I then followed combined stress through two full seasons on 12 genotypes at Tidewater AREC.</p>
+      <h4>Why it matters</h4>
+      <p>Chambers exaggerate how large the response is, but they still pick the resilient cultivars. That tells breeders how to use chamber screens and where their limits lie. Prolonged field stress erased genotype differences, so screens are most informative before stress becomes extreme.</p>
+      <div class="papers">
+        <a href="https://doi.org/10.3390/plants14172687">Plants 2025 · designed and led</a>
+        <a href="https://doi.org/10.1016/j.envexpbot.2024.105769">Env. Exp. Botany 2024 · data curation</a>
+        <a href="https://doi.org/10.1016/j.stress.2022.100106">Plant Stress 2022 · analyzed data, co-wrote</a>
+        <a href="https://doi.org/10.1038/s41598-023-28354-0">Scientific Reports 2023 · data collection</a>
+        <span class="dim">J. Sustain. Agric. Environ. · designed and led · revision submitted</span>
+      </div>
+    </div>
+    <ul class="findings">
+      <li><span class="fig hot">−93%</span><span class="t">soybean stomatal conductance under heat and drought together, against 62% for drought and 10% for heat alone. Tolerance to one did not predict tolerance to both.</span></li>
+      <li><span class="fig hot">−79%</span><span class="t">maize yield under combined stress at grain fill, with leaf temperature up 5.6 °C (Plant Stress 2022; I analyzed the data and co-wrote).</span></li>
+      <li><span class="fig">65 vs 21%</span><span class="t">drop in peanut stomatal conductance in the chamber versus the field under the same combined stress.</span></li>
+      <li><span class="fig ok">NC 20</span><span class="t">and Sullivan kept the highest gas exchange in both settings, so chamber rankings carried over to the field.</span></li>
+      <li><span class="fig hot">+6 °C</span><span class="t">peanut canopy temperature under shelters, with stomatal conductance down up to 69% (manuscript in revision).</span></li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <p class="era">MS-era · Mississippi State, 2021–2023</p>
+    <div class="strip" data-photos="ms-combined" style="--n:4"></div>
+    <nav class="pager" aria-label="Project navigation"><a href="#corn-window"><span class="mono">← Previous</span><b>Water stress in corn</b></a><a class="next" href="#drone-wilting"><span class="mono">Next project →</span><b>Seeing stress from the air</b></a></nav>
+  </div>
+</section>
+
+<!-- =================== PROJECT 03 =================== -->
+<section class="page" id="p-drone-wilting" data-page="drone-wilting">
+  <div class="proj-hero">
+    <img src="img/aerial-trial-2024.jpg" alt="" style="object-position: 50% 50%">
+    <div class="wrap">
+      <div class="big enter">03</div>
+      <h1 class="enter">Can a drone score stress in a season it has never seen?</h1>
+      <div class="meta enter"><span class="tag">PhD · Virginia Tech · 2023–2026</span><span class="tag">Peanut · <em>Arachis hypogaea</em></span><span class="tag">Role: designed and led</span></div>
+    </div>
+  </div>
+  <div class="wrap proj-body">
+    <div>
+      <p class="q">Peanut pods form underground, so canopy wilting is one of the few visible signs of reproductive stress. It is scored by eye, one plot at a time.</p>
+      <h4>What I did</h4>
+      <p>I designed and led drone multispectral monitoring at three locations (Suffolk, Virginia; Rocky Mount and Williamston, North Carolina) over 2023–2025: 12 environments, 12 to 34 genotypes per trial, and about 3,190 plots, eight of the environments inside the regional peanut variety-testing program. I paired the imagery with 9,387 plot-level wilting scores and compared four algorithms (k-nearest neighbors, random forest, XGBoost, neural network) with leave-one-year-out validation: each season was predicted only from the other two. I hold an FAA Part 107 remote pilot certificate.</p>
+      <h4>Why it matters</h4>
+      <p>Many crop-stress models are tested on random plot splits from the same seasons, which overstates how well they will work next year. Testing on whole unseen seasons is the problem a variety-testing program actually faces.</p>
+      <div class="candor"><b>Where it falls short.</b> The models underpredicted severe wilting (scores of 3 or more) when it was rare in the withheld season, and adding vegetation indices or growing degree days did not improve accuracy. Both are stated in the paper.</div>
+      <div class="papers">
+        <a href="https://doi.org/10.1007/s44279-026-00506-6">Discover Agriculture 2026 review · wrote</a>
+        <span class="dim">Smart Agricultural Technology · designed and led · revision submitted</span>
+      </div>
+      <figure class="paper-fig">
+        <div class="frame"><img src="img/wilting-review-fig1.jpg" alt="Diagram of five stages from a healthy plant to severe wilting, with the physiological changes and yield impacts at each stage" width="1417" height="1038"></div>
+        <figcaption><b>From stomatal closure to visible wilting.</b> Figure 1 of my review. Vennam et al. 2026, <i>Discover Agriculture</i> 4:32, CC BY-NC-ND 4.0.</figcaption>
+      </figure>
+    </div>
+    <div>
+      <ul class="findings">
+        <li><span class="fig ok">R² 0.89</span><span class="t">neural-network prediction of wilting in a withheld season (2024), from spectral bands alone; 0.85 in 2025.</span></li>
+        <li><span class="fig">4,647</span><span class="t">quality-screened plot observations, from 9,387 collected.</span></li>
+        <li><span class="fig">ρ 0.74</span><span class="t">correlation of red reflectance with wilting; near-infrared and every vegetation index fell as wilting rose.</span></li>
+        <li><span class="fig">3,639</span><span class="t">accesses and an Altmetric score of 78 for the wilting review within ten months.</span></li>
+      </ul>
+      <div class="panel" style="margin-top:24px" id="r2panel">
+        <h3>Wilting predicted in unseen seasons</h3>
+        <p class="sub">Leave-one-year-out R², spectral bands only</p>
+        <div class="bars" id="r2bars"></div>
+        <div class="axis"><span class="sp"></span><div class="ticks" id="r2ticks"></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="era">PhD · Virginia Tech, 2023–2026</p>
+    <div class="strip" data-photos="phd-drone" style="--n:4"></div>
+    <nav class="pager" aria-label="Project navigation"><a href="#combined-stress"><span class="mono">← Previous</span><b>Heat plus drought, chamber to field</b></a><a class="next" href="#stress-economics"><span class="mono">Next project →</span><b>Putting a price on stress</b></a></nav>
+  </div>
+</section>
+
+<!-- =================== PROJECT 04 =================== -->
+<section class="page" id="p-stress-economics" data-page="stress-economics">
+  <div class="proj-hero">
+    <img src="img/phd/shelter-sampling.jpg" alt="" style="object-position: 50% 45%">
+    <div class="wrap">
+      <div class="big enter">04</div>
+      <h1 class="enter">What does a hot, dry mid-season cost a peanut grower?</h1>
+      <div class="meta enter"><span class="tag">PhD · Tidewater AREC · 2024–2025</span><span class="tag">12 genotypes · 4 reps</span><span class="tag">Role: led</span></div>
+    </div>
+  </div>
+  <div class="wrap proj-body">
+    <div>
+      <p class="q">Virginia-type peanuts are sold on grade, so yield alone understates what stress costs.</p>
+      <h4>What I did</h4>
+      <p>I led two seasons of trials on 12 genotypes (five commercial cultivars, six University of Florida breeding lines, and a tolerant Spanish-type check), with movable rainout shelters over half the plots for 65 to 70 days from flowering to early seed fill, in a split-plot design with four replications. I measured pod yield, grade, gross crop value, and net returns under four production-cost scenarios.</p>
+      <h4>Why it matters</h4>
+      <p>Growers get a measured cost of a hot, dry mid-season. Breeders get a ranked set of advanced lines under realistic stress. I wrote the 2024 results up for growers, in pounds and dollars per acre, as a Virginia Cooperative Extension publication.</p>
+      <div class="papers">
+        <span class="dim">Peanut Science · led · accepted, in press</span>
+        <a href="https://pubs.ext.vt.edu/SPES/spes-672/spes-672.html">Virginia Cooperative Extension SPES-672 (2025) · wrote</a>
+      </div>
+    </div>
+    <div>
+      <ul class="findings">
+        <li><span class="fig hot">−52%</span><span class="t">pod yield under combined stress in 2024, and −73% in 2025.</span></li>
+        <li><span class="fig hot">$770</span><span class="t">gross crop value lost per acre in 2024 ($680 in 2025). Net returns went negative at every production-cost level in both years.</span></li>
+        <li><span class="fig ok">8.2 t/ha</span><span class="t">top rainfed yield, from breeding line 14x009-1-5-1-1, which also stayed comparatively high under stress.</span></li>
+      </ul>
+      <p class="sec-intro" style="margin-top:20px">See the full yield and value chart on the <a href="#impact">Impact</a> page, or play the season in the <a href="#season">simulator</a>.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="era">PhD · through a season of peanut trials</p>
+    <div class="strip" data-photos="phd-season" style="--n:6"></div>
+    <nav class="pager" aria-label="Project navigation"><a href="#drone-wilting"><span class="mono">← Previous</span><b>Seeing stress from the air</b></a><a class="next" href="#season"><span class="mono">Try it →</span><b>Season simulator</b></a></nav>
+  </div>
+</section>
+
+<!-- =================== SEASON SIMULATOR =================== -->
+<section class="page" id="p-season" data-page="season">
+  <div class="wrap page-head">
+    <p class="kicker enter">Interactive · peanut, Tidewater AREC</p>
+    <h1 class="enter">A season under the shelter</h1>
+    <p class="lede enter">Drag through a Virginia peanut season. Switch the shelter on, and from flowering to early seed fill the plot loses its rain. Each gauge climbs toward the largest effect I measured in the 2024–2025 trials.</p>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px">
+    <div class="sim enter">
+      <div class="sim-stage"><canvas id="simCanvas" aria-label="Animated peanut plant above and below ground for the selected day and treatment" role="img"></canvas></div>
+      <div class="sim-side">
+        <div class="seg" role="group" aria-label="Treatment">
+          <button id="tRain" aria-pressed="true">Rainfed</button>
+          <button id="tStress" class="hotsel" aria-pressed="false">Heat + drought</button>
+        </div>
+        <div class="daybox"><div><span class="mono dim">Day after planting</span><div class="d num" id="dayN">0</div></div><div class="st" id="stageN">Planting</div></div>
+        <div class="meter"><span class="lab">Soil water vs rainfed</span><span class="val" id="mSoil">0%</span><div class="bar"><span id="bSoil"></span></div></div>
+        <div class="meter"><span class="lab">Daytime high vs open field</span><span class="val" id="mAir">+0 °C</span><div class="bar"><span id="bAir"></span></div></div>
+        <div class="meter"><span class="lab">Canopy temperature</span><span class="val" id="mCan">+0.0 °C</span><div class="bar"><span id="bCan"></span></div></div>
+        <div class="meter"><span class="lab">Stomatal conductance</span><span class="val" id="mGs">0%</span><div class="bar"><span id="bGs"></span></div></div>
+        <div class="meter"><span class="lab">Wilting score (0–5)</span><span class="val" id="mWilt">0.0</span><div class="bar"><span id="bWilt"></span></div></div>
+        <div class="meter"><span class="lab">Pod yield vs rainfed (2024)</span><span class="val" id="mYield">pending</span><div class="bar"><span id="bYield"></span></div></div>
+      </div>
+      <div class="timeline" id="tline"></div>
+      <div class="sim-controls">
+        <button class="btn" id="play">▶ Play season</button>
+        <label for="day" class="mono dim">Day</label>
+        <input type="range" id="day" min="0" max="130" value="0" step="1">
+      </div>
+    </div>
+    <p class="sim-note">How to read this: the peaks are measured maxima from my trials (soil water −60% and daytime highs +4 °F average in 2024; under the shelters, daytime highs up to 8–9 °C above rainfed plots, canopy temperature up to +6 °C, stomatal conductance down up to 69%, wilting scores of 2–3, and pod yield −52% in 2024). The day-by-day curves between those points and the plant drawing are illustrative, not data. Stage timing is approximate.</p>
+  </div>
+</section>
+
+<!-- =================== IMPACT =================== -->
+<section class="page" id="p-impact" data-page="impact">
+  <div class="wrap page-head">
+    <p class="kicker enter">Uptake and consequence</p>
+    <h1 class="enter">Cited above the field average</h1>
+    <p class="lede enter">Most of these papers are under three years old, so raw counts understate them. Field-weighted citation impact (FWCI) compares each paper with others of the same field, type, and year; 1.0 is the world average.</p>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px">
+    <div class="facts">
+      <div><span class="v" data-count="536">536</span><p>citations on Google Scholar. OpenAlex indexes 12 papers and counts 430, h-index 7.</p></div>
+      <div><span class="v" data-count="54">54</span><p>countries: authors of the 129 publications citing my first-author papers.</p></div>
+      <div><span class="v" data-count="29">29</span><p>manuscripts reviewed for 13 journals, including <i>Scientific Reports</i> and <i>BMC Plant Biology</i>.</p></div>
+      <div><span class="v" data-count="48">48</span><p>conference abstracts since 2022: 12 oral, 15 posters, 21 co-authored.</p></div>
+    </div>
+    <div class="chart-grid">
+      <div class="panel wide">
+        <h3>Field-weighted citation impact, by paper</h3>
+        <p class="sub">8 papers in the top 10% of their field · OpenAlex, November 2026 · hover a bar for citations</p>
+        <div class="bars" id="fwci"></div>
+        <div class="axis"><span class="sp"></span><div class="ticks" id="fwciTicks"></div></div>
+        <div class="legend"><span><i></i>First author</span><span><i class="c"></i>Contributing author</span><span><i class="r"></i>World average (1.0)</span></div>
+      </div>
+      <div class="panel">
+        <div class="top"><div><h3 id="yTitle">Peanut pod yield</h3><p class="sub" id="ySub">t/ha · 12 genotypes · Tidewater AREC</p></div>
+          <div class="seg" role="group" aria-label="Measure"><button id="yBtnY" aria-pressed="true">Yield</button><button id="yBtnV" aria-pressed="false">Crop value</button></div></div>
+        <div class="cols-chart" id="ycols"></div>
+        <div class="cols-x"><span>2024</span><span>2025</span></div>
+        <div class="legend"><span><i></i>Rainfed</span><span><i class="h"></i>Heat + drought (shelter)</span></div>
+      </div>
+      <div class="panel">
+        <h3>What the citing work does with it</h3>
+        <p class="sub">From the 129 citing publications</p>
+        <ul class="ledger" style="margin-top:12px">
+          <li><span class="y">Corn</span><span>Stage-targeted supplemental irrigation, satellite drought-impact studies, and index-based corn insurance design (<i>Land Use Policy</i>).</span></li>
+          <li><span class="y">Models</span><span>Soil moisture in machine-learning corn yield prediction (<i>Agricultural Water Management</i>) and field-scale yield models (<i>Field Crops Research</i>).</span></li>
+          <li><span class="y">Salinity</span><span>Thermal and RGB imaging with neural networks to assess wheat salt tolerance in the field.</span></li>
+          <li><span class="y">Media</span><span>Corn drought research featured in an ASA-CSSA-SSSA news release, covered by Phys.org and Strip-Till Farmer.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PUBLICATIONS =================== -->
+<section class="page" id="p-publications" data-page="publications">
+  <div class="wrap page-head">
+    <p class="kicker enter">Publications</p>
+    <h1 class="enter">Peer-reviewed work</h1>
+    <p class="lede enter">Each entry lists my role as stated in the paper’s author contributions. Filter by authorship, status, or crop.</p>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px">
+    <div class="filters" id="pubFilters" role="group" aria-label="Filter publications">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="first" aria-pressed="false">First author</button>
+      <button class="chip" data-f="contrib" aria-pressed="false">Contributing</button>
+      <button class="chip" data-f="pending" aria-pressed="false">In press / revision</button>
+      <button class="chip" data-f="peanut" aria-pressed="false">Peanut</button>
+      <button class="chip" data-f="corn" aria-pressed="false">Corn / maize</button>
+      <button class="chip" data-f="soybean" aria-pressed="false">Soybean</button>
+      <button class="chip" data-f="other" aria-pressed="false">Other crops</button>
+      <input class="search" id="pubSearch" type="search" placeholder="Search titles and journals" aria-label="Search publications">
+    </div>
+    <p class="count" id="pubCount"></p>
+    <ol class="publist" id="publist"></ol>
+  </div>
+</section>
+
+<!-- =================== GALLERY =================== -->
+<section class="page" id="p-gallery" data-page="gallery">
+  <div class="wrap page-head">
+    <p class="kicker enter">Gallery</p>
+    <h1 class="enter">In the field, the lab, and the room</h1>
+    <p class="lede enter">Photos from my MS at Mississippi State and my PhD at Virginia Tech, plus figures from my papers. Click any image to open it; use the arrow keys to move through them.</p>
+  </div>
+  <div class="wrap" style="padding-bottom: 72px">
+    <div class="filters" id="galFilters" role="group" aria-label="Filter photos">
+      <button class="chip" data-g="all" aria-pressed="true">All</button>
+      <button class="chip" data-g="PhD" aria-pressed="false">PhD · Virginia Tech</button>
+      <button class="chip" data-g="MS" aria-pressed="false">MS · Mississippi State</button>
+      <button class="chip" data-g="field" aria-pressed="false">Field</button>
+      <button class="chip" data-g="lab" aria-pressed="false">Lab and chambers</button>
+      <button class="chip" data-g="talks" aria-pressed="false">Talks and awards</button>
+    </div>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- =================== OUTREACH =================== -->
+<section class="page" id="p-outreach" data-page="outreach">
+  <div class="wrap page-head">
+    <p class="kicker enter">Extension, mentoring, recognition</p>
+    <h1 class="enter">The work outside the paper</h1>
+    <p class="lede enter">Growers trust results they can see in fields like their own, and the best research questions come from the people who will use the answers.</p>
+  </div>
+  <div class="wrap" style="padding: 48px var(--gutter) 24px">
+    <div class="strip" data-photos="outreach" style="--n:4"></div>
+  </div>
+  <div class="wrap" style="padding-bottom: 56px">
+    <div class="two">
+      <div>
+        <p class="subhead">Extension and outreach</p>
+        <ul class="ledger">
+          <li><span class="y">2025</span><span><b>Extension publication.</b> <i>The Toll of Mid-Season Heat and Drought on Peanut Yield and Grade in Virginia</i>, Virginia Cooperative Extension SPES-672.</span></li>
+          <li><span class="y">Ongoing</span><span><b>Growers.</b> Discussed results and management with cooperating growers on on-farm peanut trials in Virginia and North Carolina; demonstrated heat, drought, and rainfed trials at Tidewater AREC field days.</span></li>
+          <li><span class="y">2025</span><span><b>Industry.</b> Briefed DRS/ManiAgro (Argentina) on heat and drought effects, multispectral imagery, and machine-learning wilting maps.</span></li>
+          <li><span class="y">2026</span><span><b>Schools.</b> Interactive drone sessions for ~110 Suffolk Public Schools students (Ag Innovation Tour); hosted Southampton Academy K-12 students.</span></li>
+          <li><span class="y">2024</span><span><b>Training.</b> Talks at the Peanut Innovation Lab Summer Drone School and in the graduate course Advanced Topics in PPWS (rainout-shelter methods).</span></li>
+          <li><span class="y">2023</span><span><b>Media.</b> Corn drought research featured in an ASA-CSSA-SSSA news release.</span></li>
+        </ul>
+        <p class="subhead" style="margin-top:40px">Mentoring, teaching, leadership</p>
+        <ul class="ledger">
+          <li><span class="y">2022–</span><span><b>Mentoring to publication.</b> Mentored undergraduate researcher Xinyan Jian, second author on our corn drought paper; supervised summer field workers and undergraduate researchers.</span></li>
+          <li><span class="y">2024</span><span><b>Teaching.</b> TA for World Crops: Food and Culture (SPES 2244): weekly labs for 50 undergraduates in two sections.</span></li>
+          <li><span class="y">2025–26</span><span><b>President</b>, APRES Graduate Student Organization (Vice President 2024–25); 2025 APRES meeting planning committee.</span></li>
+          <li><span class="y">Training</span><span>Trained an Agricultural Technician III and a Laboratory and Research Specialist (Virginia Tech), and a postdoctoral associate and a PhD candidate (Mississippi State), in field and physiological methods.</span></li>
+          <li><span class="y">2026</span><span><b>Session judge</b>, CANVAS 2026 (ASA-CSSA-SSSA), Portland, OR: Precision Agriculture Community and Airborne and Satellite Remote Sensing sessions.</span></li>
+          <li><span class="y">Service</span><span>Reviewed 29 manuscripts for 13 journals; judged graduate and undergraduate poster contests (2022, 2023, 2025).</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="subhead">Recognition</p>
+        <ul class="ledger">
+          <li><span class="y">2026</span><span><b>Gerald O. Mott Award</b>, Crop Science Society of America</span></li>
+          <li><span class="y">2025</span><span><b>Outstanding PhD Student</b>, Association of Agricultural Scientists of Indian Origin</span></li>
+          <li><span class="y">2025</span><span><b>Selected mentee</b>, Bayer Crop Science B4U University Mentoring Program</span></li>
+          <li><span class="y">2024</span><span><b>Outstanding Alumni Award for Excellence in Research</b>, Lovely Professional University</span></li>
+          <li><span class="y">2024</span><span><b>Bruce W. Perry Scholarship</b>, School of Plant and Environmental Sciences, Virginia Tech</span></li>
+          <li><span class="y">2022–26</span><span><b>Ten poster awards</b> at national and regional meetings, four of them first place</span></li>
+        </ul>
+        <p class="subhead" style="margin-top:40px">Training and positions</p>
+        <ul class="ledger">
+          <li><span class="y">2026–</span><span><b>Research Assistant</b>, Crop Physiology Lab, Tidewater AREC, Virginia Tech. Faba bean variety, planting-date, and nitrogen-rate trials on a $2.7M USDA project.</span></li>
+          <li><span class="y">2026</span><span><b>Ph.D., Plant Pathology, Physiology and Weed Science</b>, Virginia Tech (GPA 4.0). Dissertation on peanut (<i>Arachis hypogaea</i> L.) responses to heat and drought. Advisor: Maria Balota.</span></li>
+          <li><span class="y">2023</span><span><b>MS, Agronomy</b>, Mississippi State University (GPA 4.0). Thesis on soil moisture stress across corn growth phases. Advisor: Raju Bheemanahalli.</span></li>
+          <li><span class="y">2019–21</span><span><b>Quality Specialist</b>, Amazon Development Center: high-volume geospatial data validation.</span></li>
+          <li><span class="y">2019</span><span><b>BSc (Hons.) Agriculture</b>, Lovely Professional University, India (9.54/10).</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="era" style="margin-top:48px">Talks, posters, and awards</p>
+    <div class="strip" data-photos="talks" style="--n:4"></div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section class="page" id="p-contact" data-page="contact">
+  <div class="wrap contact-grid">
+    <img class="enter" src="img/ms/corn-canopy.jpg" alt="Ranadheer examining corn leaves in a hoop house" width="1050" height="1400">
+    <div>
+      <p class="kicker enter">Open to postdoc, research scientist, faculty, and industry R&amp;D roles</p>
+      <h2 class="enter" style="margin-top:14px">Let’s talk about your program</h2>
+      <p class="muted enter" style="margin-top:18px;max-width:52ch">Crop physiology, stress phenotyping, and applied field research. Based in Virginia and open to relocation. Full CV and references on request.</p>
+      <dl class="enter">
+        <dt>Email</dt><dd><a href="mailto:ranadheerv@vt.edu">ranadheerv@vt.edu</a></dd>
+        <dt>ORCID</dt><dd><a href="https://orcid.org/0000-0001-5912-7856">0000-0001-5912-7856</a></dd>
+        <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ranadheerreddy">linkedin.com/in/ranadheerreddy</a></dd>
+        <dt>Based at</dt><dd>Tidewater AREC, Suffolk, Virginia</dd>
+      </dl>
+      <div class="copy-row enter"><button class="btn primary" id="copyEmail">Copy email address</button><span class="mono dim" id="copyMsg" aria-live="polite"></span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span>Figures as of November 2026 · citations: Google Scholar (536); field-weighted metrics and h-index: OpenAlex.</span><span>© 2026 Ranadheer Reddy Vennam</span></div>
+</footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-top"><span id="lbCount"></span><button class="btn" id="lbClose">Close ✕</button></div>
+  <div class="lb-img"><img id="lbImg" alt=""></div>
+  <div class="lb-bot"><p id="lbCap"></p><div class="lb-nav"><button class="btn" id="lbPrev" aria-label="Previous photo">←</button><button class="btn" id="lbNext" aria-label="Next photo">→</button></div></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* =================== DATA =================== */
+  var PHOTOS = [
+    // PhD
+    { id: "portrait-peanut-pods", src: "img/phd/portrait-peanut-pods.jpg", cap: "Checking pod set on a dug peanut plant.", era: "PhD", tags: ["field"] },
+    { id: "early-season-notes", src: "img/phd/early-season-notes.jpg", cap: "Early season: stand and growth notes in a young peanut trial.", era: "PhD", tags: ["field"] },
+    { id: "scoring-plants", src: "img/phd/scoring-plants.jpg", cap: "Tagging and scoring peanut plants.", era: "PhD", tags: ["field"] },
+    { id: "shelter-sensors", src: "img/phd/shelter-sensors.jpg", cap: "Checking soil-moisture and weather sensors under a rainout shelter.", era: "PhD", tags: ["field"] },
+    { id: "shelter-sampling", src: "img/phd/shelter-sampling.jpg", cap: "Sampling plants beside the rainout shelters.", era: "PhD", tags: ["field"] },
+    { id: "hand-harvest", src: "img/phd/hand-harvest.jpg", cap: "Harvesting plots by hand.", era: "PhD", tags: ["field"] },
+    { id: "drone-prep", src: "img/phd/drone-prep.jpg", cap: "Drone imaging of the peanut trials.", era: "PhD", tags: ["field"] },
+    { id: "canopy-measurement", src: "img/phd/canopy-measurement.jpg", cap: "In-season canopy measurements.", era: "PhD", tags: ["field"] },
+    { id: "field-notes", src: "img/phd/field-notes.jpg", cap: "Ground observations to pair with the drone imagery.", era: "PhD", tags: ["field"] },
+    { id: "visitors-shelter", src: "img/phd/visitors-shelter.jpg", cap: "Walking visitors through the rainout-shelter trial.", era: "PhD", tags: ["field", "talks"] },
+    { id: "cotton-harvest", src: "img/phd/cotton-harvest.jpg", cap: "Checking open bolls in a cotton field at harvest.", era: "PhD", tags: ["field"] },
+    { id: "faba-greenhouse", src: "img/phd/faba-greenhouse.jpg", cap: "Faba bean in the greenhouse, current project.", era: "PhD", tags: ["lab"] },
+    { id: "talk-image-processing", src: "img/phd/talk-image-processing.jpg", cap: "Presenting the drone image-processing workflow.", era: "PhD", tags: ["talks"] },
+    { id: "poster-htp-2024", src: "img/phd/poster-htp-2024.jpg", cap: "Poster on high-throughput phenotyping for peanut heat and drought resilience (APRES 2024).", era: "PhD", tags: ["talks"] },
+    { id: "poster-chamber-field-2025", src: "img/phd/poster-chamber-field-2025.jpg", cap: "Poster on chamber-versus-field peanut responses (2025).", era: "PhD", tags: ["talks"] },
+    { id: "award-aasio", src: "img/phd/award-aasio.jpg", cap: "Receiving a plaque from the Association of Agricultural Scientists of Indian Origin.", era: "PhD", tags: ["talks"] },
+    { id: "talk-podium", src: "img/phd/talk-podium.jpg", cap: "Presenting research at a seminar.", era: "PhD", tags: ["talks"] },
+    { id: "committee", src: "img/phd/committee.jpg", cap: "With my PhD committee, in person and online.", era: "PhD", tags: ["talks"] },
+    { id: "rainout-shelters", src: "img/rainout-shelters.jpg", cap: "Movable rainout shelters over the 2024 trial. From Vennam & Balota, VCE SPES-672.", era: "PhD", tags: ["field"] },
+    { id: "aerial-trial-2024", src: "img/aerial-trial-2024.jpg", cap: "Drone image of the 2024 trial, 70 days into stress (rotated and cropped). From VCE SPES-672.", era: "PhD", tags: ["field"] },
+    { id: "wilting-under-shelter", src: "img/wilting-under-shelter.jpg", cap: "Wilting peanut canopy under a shelter. From VCE SPES-672.", era: "PhD", tags: ["field"] },
+    { id: "rainfed-plots", src: "img/rainfed-plots.jpg", cap: "Rainfed plots, with the shelters behind. From VCE SPES-672.", era: "PhD", tags: ["field"] },
+    // MS
+    { id: "portrait-corn", src: "img/ms/portrait-corn.jpg", cap: "Leaf measurements on field corn.", era: "MS", tags: ["field"] },
+    { id: "hoophouse-corn", src: "img/ms/hoophouse-corn.jpg", cap: "Corn in the hoop house.", era: "MS", tags: ["lab"] },
+    { id: "corn-canopy", src: "img/ms/corn-canopy.jpg", cap: "Examining corn leaves in the hoop house.", era: "MS", tags: ["lab"] },
+    { id: "corn-soil-columns", src: "img/ms/corn-soil-columns.jpg", cap: "Measuring young corn grown in soil columns.", era: "MS", tags: ["lab"] },
+    { id: "root-washing", src: "img/ms/root-washing.jpg", cap: "Washing roots out of the soil columns.", era: "MS", tags: ["lab"] },
+    { id: "root-samples", src: "img/ms/root-samples.jpg", cap: "Recovered corn root systems, ready for biomass.", era: "MS", tags: ["lab"] },
+    { id: "grain-nir", src: "img/ms/grain-nir.jpg", cap: "Measuring kernel composition.", era: "MS", tags: ["lab"] },
+    { id: "spar-chamber", src: "img/ms/spar-chamber.jpg", cap: "Working in a SPAR controlled-environment chamber.", era: "MS", tags: ["lab"] },
+    { id: "soybean-gas-exchange", src: "img/ms/soybean-gas-exchange.jpg", cap: "Measuring soybean leaf gas exchange.", era: "MS", tags: ["lab"] },
+    { id: "soybean-gas-exchange-2", src: "img/ms/soybean-gas-exchange-2.jpg", cap: "Gas-exchange measurements on soybean.", era: "MS", tags: ["lab"] },
+    { id: "cotton-sampling", src: "img/ms/cotton-sampling.jpg", cap: "Sampling cotton in the field.", era: "MS", tags: ["field"] },
+    { id: "talk-baltimore", src: "img/ms/talk-baltimore.jpg", cap: "Oral presentation on corn drought, ASA-CSSA-SSSA Annual Meeting, Baltimore (2022).", era: "MS", tags: ["talks"] },
+    { id: "poster-post-silking", src: "img/ms/poster-post-silking.jpg", cap: "Poster: post-silking water-deficit stress and yield in corn (2022).", era: "MS", tags: ["talks"] },
+    { id: "award-mas-poster", src: "img/ms/award-mas-poster.jpg", cap: "Second place, Graduate Student Poster Competition, Mississippi Academy of Sciences.", era: "MS", tags: ["talks"] },
+    { id: "award-msu-grs", src: "img/ms/award-msu-grs.jpg", cap: "Poster award, MSU Graduate Student Research Symposium, Master’s category, Agriculture and Life Sciences (Feb 2023).", era: "MS", tags: ["talks"] },
+    { id: "eppl-spar-group", src: "img/ms/eppl-spar-group.jpg", cap: "With the EPPL-SPAR group at Mississippi State.", era: "MS", tags: ["talks"] },
+    { id: "corn-soil-moisture", src: "img/corn-soil-moisture.jpg", cap: "Early-season corn at five soil moisture levels. Vennam et al. 2023, Plants, CC BY 4.0 (cropped).", era: "MS", tags: ["lab"] }
+  ];
+  var STRIPS = {
+    "ms-corn": ["portrait-corn", "corn-soil-columns", "root-washing", "root-samples", "grain-nir", "hoophouse-corn"],
+    "ms-combined": ["spar-chamber", "soybean-gas-exchange", "soybean-gas-exchange-2", "cotton-sampling"],
+    "phd-drone": ["drone-prep", "canopy-measurement", "field-notes", "talk-image-processing"],
+    "phd-season": ["early-season-notes", "scoring-plants", "shelter-sensors", "shelter-sampling", "hand-harvest", "rainfed-plots"],
+    "outreach": ["visitors-shelter", "cotton-harvest", "faba-greenhouse", "committee"],
+    "talks": ["talk-baltimore", "talk-podium", "award-aasio", "award-mas-poster", "award-msu-grs", "poster-htp-2024", "poster-chamber-field-2025", "poster-post-silking", "eppl-spar-group"]
+  };
+  var PROJECTS = [
+    { n: "01", href: "#corn-window", img: "img/ms/portrait-corn.jpg", pos: "60% 30%", t: "When does water stress do the most damage to corn?", d: "Stage-resolved drought and salinity response curves. MS, Mississippi State." },
+    { n: "02", href: "#combined-stress", img: "img/wilting-under-shelter.jpg", pos: "50% 60%", t: "Is heat plus drought just the sum of its parts?", d: "Combined stress in maize, soybean, and peanut, from chamber to field." },
+    { n: "03", href: "#drone-wilting", img: "img/phd/drone-prep.jpg", pos: "50% 60%", t: "Can a drone score stress in a season it has never seen?", d: "UAV multispectral imaging and machine learning over ~3,190 plots." },
+    { n: "04", href: "#stress-economics", img: "img/phd/shelter-sampling.jpg", pos: "50% 45%", t: "What does a hot, dry mid-season cost a peanut grower?", d: "Yield, grade, and net returns under rainout shelters." }
+  ];
+  var PUBS = [
+    { y: 2026, t: "Yield, grade, and economic performance of peanut under combined heat and drought stress", a: "<b>Vennam, R.R.</b>, Balota, M.", v: "Peanut Science", st: "In press", role: "Led", first: true, crops: ["peanut"] },
+    { y: 2026, t: "A machine learning-based approach for predicting heat and drought induced wilting in peanut using UAV multispectral imagery and thermal time", a: "<b>Vennam, R.R.</b>, Raymond, S., Chandel, A.K., Forehand, J., Balota, M.", v: "Smart Agricultural Technology", st: "Revision submitted", role: "Designed, led", first: true, crops: ["peanut"] },
+    { y: 2026, t: "Leaf and canopy scale morpho-physiological and spectral traits as indicators of peanut yield under synergistic heat and drought stress", a: "<b>Vennam, R.R.</b>, Balota, M., Chandel, A.K., Haak, D.C., Oakes, J.C.", v: "Journal of Sustainable Agriculture and Environment", st: "Revision submitted", role: "Designed, led", first: true, crops: ["peanut"] },
+    { y: 2026, t: "Leaf wilting as a phenotypic indicator of heat and drought stress in crops: an overview of physiological mechanisms and machine learning applications", a: "<b>Vennam, R.R.</b>, Chandel, A.K., Haak, D.C., Oakes, J.C., Balota, M.", v: "Discover Agriculture 4, 32", doi: "10.1007/s44279-026-00506-6", role: "Wrote", first: true, crops: ["peanut"] },
+    { y: 2026, t: "Toward advanced sensing and data-driven approaches for maturity assessment of indeterminate peanut cropping systems", a: "Raymond, S., Chandel, A.K., Jjagwe, P., <b>Vennam, R.R.</b>, Balota, M., Manimozhian, A.", v: "Sensors 26(7)", doi: "10.3390/s26072208", role: "Co-drafted", first: false, crops: ["peanut"] },
+    { y: 2025, t: "Evaluation of peanut physiological responses to heat and drought stress across growth chamber and field environments", a: "<b>Vennam, R.R.</b>, Beard, K.M., Haak, D., Balota, M.", v: "Plants 14, 2687", doi: "10.3390/plants14172687", role: "Designed, led", first: true, crops: ["peanut"] },
+    { y: 2025, t: "Exploring the effects of drought and salt stress on physiology, leaf reflectance, and growth dynamics of <i>Brassica carinata</i>", a: "<b>Vennam, R.R.</b>, Chintalapudi, D.P.M., Shrestha, A., Bheemanahalli, R., Seepaul, R., Gao, W., Reddy, K.R.", v: "Industrial Crops and Products 235", doi: "10.1016/j.indcrop.2025.121648", role: "Analyzed, wrote", first: true, crops: ["other"] },
+    { y: 2025, t: "Impacts of abiotic stresses on cotton physiology and vigor under current and future CO₂ levels", a: "Bista, M., Ramamoorthy, P., <b>Vennam, R.R.</b>, Poudel, S., Reddy, K.R., Bheemanahalli, R.", v: "Journal of Integrative Agriculture", doi: "10.1016/j.jia.2025.04.012", role: "Co-author", first: false, crops: ["other"] },
+    { y: 2024, t: "Early-season maize responses to salt stress: morpho-physiological, leaf reflectance, and mineral composition", a: "<b>Vennam, R.R.</b>, Bheemanahalli, R., Reddy, K.R., Dhillon, J., Zhang, X., Adeli, A.", v: "Journal of Agriculture and Food Research 15", doi: "10.1016/j.jafr.2024.100994", role: "Ran, analyzed", first: true, crops: ["corn"] },
+    { y: 2024, t: "Effects of pre- and post-anthesis drought stress on corn physiology and yield", a: "<b>Vennam, R.R.</b>, Jian, X., Dhillon, J., Reddy, K.R., Reddy, K.N., Bheemanahalli, R.", v: "Journal of the Mississippi Academy of Sciences 69", doi: "10.34107/CTJP1687", role: "Ran, analyzed", first: true, crops: ["corn"] },
+    { y: 2024, t: "Negative synergistic effects of drought and heat during flowering and seed setting in soybean", a: "Poudel, S., <b>Vennam, R.R.</b>, Sankarapillai, L.V., et al., Bheemanahalli, R.", v: "Environmental and Experimental Botany 222", doi: "10.1016/j.envexpbot.2024.105769", role: "Data curation", first: false, crops: ["soybean"] },
+    { y: 2023, t: "Impact of soil moisture stress during the silk emergence and grain-filling in maize", a: "<b>Vennam, R.R.</b>, Poudel, S., Ramamoorthy, P., Samiappan, S., Reddy, K.R., Bheemanahalli, R.", v: "Physiologia Plantarum 175, e14029", doi: "10.1111/ppl.14029", role: "Co-designed, ran", first: true, crops: ["corn"] },
+    { y: 2023, t: "Developing functional relationships between soil moisture content and corn early-season physiology, growth, and development", a: "<b>Vennam, R.R.</b>, Ramamoorthy, P., Poudel, S., Reddy, K.R., Henry, W.B., Bheemanahalli, R.", v: "Plants 12, 2471", doi: "10.3390/plants12132471", role: "Ran, analyzed", first: true, crops: ["corn"] },
+    { y: 2023, t: "Comparison of UV, visible and near-infrared, and mid-infrared spectrometers to estimate maize and sorghum leaf nutrients", a: "Silva, F.H.C.A., Wijewardane, N.K., Bheemanahalli, R., Reddy, K.R., Zhang, X., <b>Vennam, R.R.</b>", v: "Computers and Electronics in Agriculture 211", doi: "10.1016/j.compag.2023.108001", role: "Investigation", first: false, crops: ["corn", "other"] },
+    { y: 2023, t: "Resilience of soybean cultivars to drought stress during flowering and early-seed setting stages", a: "Poudel, S., <b>Vennam, R.R.</b>, Shrestha, A., et al.", v: "Scientific Reports 13, 1277 · Editor’s Choice", doi: "10.1038/s41598-023-28354-0", role: "Data collection", first: false, crops: ["soybean"] },
+    { y: 2022, t: "Effects of post-flowering heat and drought stresses on physiology, yield, and quality in maize (<i>Zea mays</i> L.)", a: "Bheemanahalli, R., <b>Vennam, R.R.</b>, Ramamoorthy, P., Reddy, K.R.", v: "Plant Stress 6, 100106", doi: "10.1016/j.stress.2022.100106", role: "Analyzed, co-wrote", first: false, crops: ["corn"] },
+    { y: "Prep", t: "Physiological and gene expression dynamics in peanut leaves under heat and drought stress", a: "<b>Vennam, R.R.</b>, Haak, D.C., Balota, M.", v: "Manuscript", st: "In preparation", role: "First author", first: true, crops: ["peanut"] }
+  ];
+  var FWCI = [
+    { p: "Soybean drought resilience", v: "Scientific Reports 2023", f: 23.7, pct: "99.9th", c: 169, first: false },
+    { p: "Soybean heat + drought", v: "Env. Exp. Botany 2024", f: 11.2, pct: "99.2nd", c: 53, first: false },
+    { p: "Early-season maize salt stress", v: "J. Agric. Food Res. 2024", f: 9.5, pct: "98.9th", c: 45, first: true },
+    { p: "Early-season corn soil moisture", v: "Plants 2023", f: 5.8, pct: "97.0th", c: 46, first: true },
+    { p: "Leaf-wilting review", v: "Discover Agriculture 2026", f: 5.5, pct: "94.7th", c: 3, first: true },
+    { p: "Corn drought at silking, grain fill", v: "Physiologia Plantarum 2023", f: 4.3, pct: "94.5th", c: 32, first: true },
+    { p: "Maize post-flowering heat + drought", v: "Plant Stress 2022", f: 4.0, pct: "94.2nd", c: 46, first: false },
+    { p: "<i>B. carinata</i> drought and salt", v: "Ind. Crops Prod. 2025", f: 3.1, pct: "91.8th", c: 7, first: true }
+  ];
+  var byId = {}; PHOTOS.forEach(function (p, i) { p.i = i; byId[p.id] = p; });
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+  /* =================== CARDS =================== */
+  function cardsHTML() {
+    return PROJECTS.map(function (p) {
+      return '<a class="card" href="' + p.href + '"><img src="' + p.img + '" alt="" loading="lazy" style="object-position:' + p.pos + '"><span class="n">' + p.n + '</span><div class="body"><h3>' + p.t + '</h3><p>' + p.d + '</p><p class="go">Open project →</p></div></a>';
+    }).join("");
+  }
+  document.getElementById("homeCards").innerHTML = cardsHTML();
+  document.getElementById("researchCards").innerHTML = cardsHTML();
+
+  /* =================== STRIPS + LIGHTBOX =================== */
+  var lbList = [], lbIdx = 0, lastFocus = null;
+  var lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg"), lbCap = document.getElementById("lbCap"), lbCount = document.getElementById("lbCount");
+  function openLB(list, idx) { lbList = list; lbIdx = idx; lastFocus = document.activeElement; showLB(); lb.classList.add("open"); document.body.style.overflow = "hidden"; document.getElementById("lbClose").focus(); }
+  function showLB() { var p = byId[lbList[lbIdx]]; lbImg.src = p.src; lbImg.alt = p.cap; lbCap.innerHTML = esc(p.cap) + '<span>' + (p.era === "MS" ? "MS-era · Mississippi State" : "PhD · Virginia Tech") + '</span>'; lbCount.textContent = (lbIdx + 1) + " / " + lbList.length; }
+  function closeLB() { lb.classList.remove("open"); document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
+  function step(d) { lbIdx = (lbIdx + d + lbList.length) % lbList.length; showLB(); }
+  document.getElementById("lbClose").onclick = closeLB;
+  document.getElementById("lbPrev").onclick = function () { step(-1); };
+  document.getElementById("lbNext").onclick = function () { step(1); };
+  lb.addEventListener("click", function (e) { if (e.target === lb || e.target.classList.contains("lb-img")) closeLB(); });
+  document.addEventListener("keydown", function (e) {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLB(); else if (e.key === "ArrowRight") step(1); else if (e.key === "ArrowLeft") step(-1);
+  });
+  var tx0 = null;
+  lb.addEventListener("touchstart", function (e) { tx0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", function (e) { if (tx0 === null) return; var dx = e.changedTouches[0].clientX - tx0; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx0 = null; });
+
+  document.querySelectorAll(".strip[data-photos]").forEach(function (el) {
+    var ids = STRIPS[el.getAttribute("data-photos")];
+    el.innerHTML = ids.map(function (id, k) { var p = byId[id]; return '<button data-k="' + k + '" aria-label="Open photo: ' + esc(p.cap) + '"><div class="ph"><img src="' + p.src + '" alt="' + esc(p.cap) + '" loading="lazy"></div><p class="cap">' + esc(p.cap) + '</p></button>'; }).join("");
+    el.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) openLB(ids, +b.getAttribute("data-k")); });
+  });
+
+  /* =================== GALLERY =================== */
+  var masonry = document.getElementById("masonry"), galF = "all";
+  function renderGallery() {
+    var list = PHOTOS.filter(function (p) { return galF === "all" || p.era === galF || p.tags.indexOf(galF) >= 0; });
+    var ids = list.map(function (p) { return p.id; });
+    masonry.innerHTML = list.map(function (p, k) { return '<button data-k="' + k + '" aria-label="Open photo: ' + esc(p.cap) + '"><img src="' + p.src + '" alt="' + esc(p.cap) + '" loading="lazy"><span class="lab">' + (p.era === "MS" ? "MS-era" : "PhD") + '</span></button>'; }).join("");
+    masonry.onclick = function (e) { var b = e.target.closest("button"); if (b) openLB(ids, +b.getAttribute("data-k")); };
+  }
+  document.getElementById("galFilters").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) return; galF = b.getAttribute("data-g");
+    this.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+    renderGallery();
+  });
+  renderGallery();
+
+  /* =================== PUBLICATIONS =================== */
+  var pubF = "all", pubQ = "";
+  function renderPubs() {
+    var q = pubQ.toLowerCase();
+    var list = PUBS.filter(function (p) {
+      var ok = pubF === "all" || (pubF === "first" && p.first) || (pubF === "contrib" && !p.first) || (pubF === "pending" && p.st) || p.crops.indexOf(pubF) >= 0;
+      if (ok && q) ok = (p.t + " " + p.v + " " + p.a).replace(/<[^>]+>/g, "").toLowerCase().indexOf(q) >= 0;
+      return ok;
+    });
+    document.getElementById("pubCount").textContent = list.length + " of " + PUBS.length + " entries";
+    document.getElementById("publist").innerHTML = list.map(function (p) {
+      return '<li class="pub"><span class="yr">' + p.y + '</span><div><p class="ti">' + p.t + '</p><p class="au">' + p.a + '</p><p class="ve">' + p.v + '</p>' + (p.doi ? '<a class="lk" href="https://doi.org/' + p.doi + '">doi:' + p.doi + '</a>' : '') + '</div><div class="pills"><span class="pill role">' + p.role + '</span>' + (p.st ? '<span class="pill st">' + p.st + '</span>' : '') + '<span class="pill">' + (p.first ? "First author" : "Contributing") + '</span></div></li>';
+    }).join("") || '<li class="pub"><span></span><p class="muted">No entries match. Try another filter.</p></li>';
+  }
+  document.getElementById("pubFilters").addEventListener("click", function (e) {
+    var b = e.target.closest(".chip"); if (!b) return; pubF = b.getAttribute("data-f");
+    this.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+    renderPubs();
+  });
+  document.getElementById("pubSearch").addEventListener("input", function () { pubQ = this.value; renderPubs(); });
+  renderPubs();
+
+  /* =================== CHARTS =================== */
+  function barChart(el, ticksEl, rows, max, ticks, fmt) {
+    el.innerHTML = rows.map(function (d) {
+      var w = d.val / max * 100;
+      return '<div class="brow" tabindex="0" title="' + esc(d.tip || "") + '"><div class="lbl">' + d.lbl + '<span class="mono">' + d.sub + '</span></div><div class="track">' + (d.ref != null ? '<span class="ref" style="left:' + (d.ref / max * 100) + '%"></span>' : '') + '<span class="b ' + (d.cls || "") + '" data-w="' + w + '"></span><span class="val" style="left:calc(' + w + '% + 8px)">' + fmt(d) + '</span></div></div>';
+    }).join("");
+    ticksEl.innerHTML = ticks.map(function (t) { return '<span style="left:' + (t / max * 100) + '%">' + t + '</span>'; }).join("");
+  }
+  var narrow = window.innerWidth < 760;
+  barChart(document.getElementById("fwci"), document.getElementById("fwciTicks"), FWCI.map(function (d) {
+    return { lbl: d.p, sub: d.v + " · " + d.c + " cites", val: d.f, ref: 1, cls: d.first ? "" : "c", pct: d.pct, tip: d.c + " citations · " + d.pct + " percentile" };
+  }), narrow ? 40 : 30, narrow ? [0, 10, 20, 30, 40] : [0, 5, 10, 15, 20, 25, 30], function (d) { return d.val.toFixed(1) + " · " + d.pct + " pct"; });
+  barChart(document.getElementById("r2bars"), document.getElementById("r2ticks"), [
+    { lbl: "Neural network", sub: "withheld 2024", val: 0.89 },
+    { lbl: "Neural network", sub: "withheld 2025", val: 0.85 },
+    { lbl: "Random forest", sub: "withheld 2024", val: 0.85 },
+    { lbl: "Random forest", sub: "withheld 2025", val: 0.85 }
+  ], 1.25, [0, 0.25, 0.5, 0.75, 1], function (d) { return "R² " + d.val.toFixed(2); });
+
+  var YD = { y: { unit: "t/ha", title: "Peanut pod yield", sub: "t/ha · 12 genotypes · Tidewater AREC", max: 7.5, d: [[6.4, 3.1, "−52%"], [4.1, 1.1, "−73%"]], f: function (v) { return v.toFixed(1); } },
+             v: { unit: "$/ha", title: "Gross crop value", sub: "US$ per hectare · at $570 per ton", max: 4200, d: [[3649, 1741, "−$770/ac"], [2319, 630, "−$680/ac"]], f: function (v) { return "$" + v.toLocaleString("en-US"); } } };
+  var yMode = "y";
+  function renderYield(animate) {
+    var m = YD[yMode]; document.getElementById("yTitle").textContent = m.title; document.getElementById("ySub").textContent = m.sub;
+    var c = document.getElementById("ycols");
+    c.innerHTML = m.d.map(function (g) { return '<div class="grp"><div class="pair"><div class="col" data-h="' + (g[0] / m.max * 100) + '"><span>' + m.f(g[0]) + '</span></div><div class="col h" data-h="' + (g[1] / m.max * 100) + '"><span>' + m.f(g[1]) + '</span><em>' + g[2] + '</em></div></div></div>'; }).join("");
+    var cols = c.querySelectorAll(".col");
+    if (animate === false || reduce) { cols.forEach(function (x) { x.style.transition = "none"; x.style.height = x.getAttribute("data-h") + "%"; }); return; }
+    requestAnimationFrame(function () { requestAnimationFrame(function () { cols.forEach(function (x) { x.style.height = x.getAttribute("data-h") + "%"; }); }); });
+  }
+  document.getElementById("yBtnY").onclick = function () { yMode = "y"; this.setAttribute("aria-pressed", "true"); document.getElementById("yBtnV").setAttribute("aria-pressed", "false"); renderYield(); };
+  document.getElementById("yBtnV").onclick = function () { yMode = "v"; this.setAttribute("aria-pressed", "true"); document.getElementById("yBtnY").setAttribute("aria-pressed", "false"); renderYield(); };
+
+  function growBars(scope) {
+    var bs = scope.querySelectorAll(".track .b");
+    bs.forEach(function (b) { b.style.transition = reduce ? "none" : ""; b.style.width = "0"; });
+    scope.classList.remove("charts-on");
+    var go = function () { bs.forEach(function (b) { b.style.width = b.getAttribute("data-w") + "%"; }); scope.classList.add("charts-on"); };
+    if (reduce) go(); else setTimeout(go, 120);
+  }
+
+  /* =================== COUNT-UP =================== */
+  function countUp(scope) {
+    scope.querySelectorAll("[data-count]").forEach(function (el) {
+      var target = +el.getAttribute("data-count"), pre = el.getAttribute("data-prefix") || "";
+      if (reduce) { el.textContent = pre + target.toLocaleString("en-US"); return; }
+      var t0 = null, dur = 1200;
+      function f(t) { if (t0 === null) t0 = t; var k = Math.min(1, (t - t0) / dur); var e = 1 - Math.pow(1 - k, 3); el.textContent = pre + Math.round(target * e).toLocaleString("en-US"); if (k < 1) requestAnimationFrame(f); }
+      requestAnimationFrame(f);
+    });
+  }
+
+  /* =================== HERO CANOPY =================== */
+  var cv = document.getElementById("canopy"), ctx = cv.getContext("2d"), plants = [], W = 0, H = 0, dpr = 1;
+  var ptr = { x: -9999, y: -9999, active: false }, canopyRunning = false, lastT = 0, avgTurgor = 1;
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function mix(c1, c2, t) { return "rgb(" + Math.round(lerp(c1[0], c2[0], t)) + "," + Math.round(lerp(c1[1], c2[1], t)) + "," + Math.round(lerp(c1[2], c2[2], t)) + ")"; }
+  var GREENS = [[47, 122, 76], [70, 150, 90], [121, 194, 127]], STRAW = [228, 207, 148], BROWN = [176, 140, 84];
+  var seed = 11; function rnd() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function buildCanopy() {
+    var r = cv.getBoundingClientRect(); dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    plants = []; seed = 11;
+    var rows = [{ y: H - 6, s: 1, gap: 34 }, { y: H - 46, s: 0.78, gap: 30 }, { y: H - 78, s: 0.6, gap: 26 }];
+    rows.reverse().forEach(function (row, ri) {
+      for (var x = -10; x < W + 20; x += row.gap * (0.8 + rnd() * 0.4)) {
+        var h = (70 + rnd() * 110) * row.s * (W < 600 ? 0.8 : 1), leaves = [], nodes = 4 + Math.floor(rnd() * 3);
+        for (var k = 0; k < nodes; k++) leaves.push({ at: 0.35 + k / nodes * 0.62, side: k % 2 ? 1 : -1, len: (20 + rnd() * 18) * row.s * (1 - k / nodes * 0.35), base: 0.55 + rnd() * 0.35, t: 1, ph: rnd() * 6.28 });
+        plants.push({ x: x, y: row.y, h: h, lean: (rnd() - 0.5) * 0.12, leaves: leaves, depth: ri, g: GREENS[Math.min(2, ri)] });
+      }
+    });
+  }
+  function drawCanopy(time, dt) {
+    ctx.clearRect(0, 0, W, H);
+    var g = ctx.createLinearGradient(0, H - 20, 0, H); g.addColorStop(0, "rgba(42,33,24,0)"); g.addColorStop(1, "rgba(42,33,24,0.9)"); ctx.fillStyle = g; ctx.fillRect(0, H - 20, W, 20);
+    var sumT = 0, nT = 0;
+    for (var i = 0; i < plants.length; i++) {
+      var p = plants[i], sway = reduce ? 0 : Math.sin(time * 0.0012 + p.x * 0.02) * 0.04;
+      var topX = p.x + Math.sin(p.lean + sway) * p.h, topY = p.y - Math.cos(p.lean + sway) * p.h;
+      var plantT = 0;
+      for (var k = 0; k < p.leaves.length; k++) {
+        var L = p.leaves[k], nx = lerp(p.x, topX, L.at), ny = lerp(p.y, topY, L.at);
+        var dx = nx - ptr.x, dy = ny - ptr.y, d = Math.sqrt(dx * dx + dy * dy), R = W < 600 ? 110 : 150;
+        if (ptr.active && d < R) L.t = Math.max(0, L.t - dt * 1.8 * (1 - d / R));
+        else L.t = Math.min(1, L.t + dt * 0.22);
+        plantT += L.t; sumT += L.t; nT++;
+      }
+      plantT /= p.leaves.length;
+      ctx.strokeStyle = mix(p.g, BROWN, (1 - plantT) * 0.6); ctx.lineWidth = 1.6 - p.depth * 0.3; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.quadraticCurveTo(p.x + (topX - p.x) * 0.3, lerp(p.y, topY, 0.5), topX, topY + (1 - plantT) * p.h * 0.08); ctx.stroke();
+      for (k = 0; k < p.leaves.length; k++) {
+        L = p.leaves[k]; nx = lerp(p.x, topX, L.at); ny = lerp(p.y, topY, L.at);
+        var wob = reduce ? 0 : Math.sin(time * 0.002 + L.ph) * 0.06;
+        var ang = -Math.PI / 2 + L.side * (L.base + (1 - L.t) * 1.55) + wob;
+        var len = L.len * (0.75 + 0.25 * L.t);
+        ctx.save(); ctx.translate(nx, ny); ctx.rotate(ang);
+        ctx.fillStyle = mix(p.g, STRAW, Math.pow(1 - L.t, 0.8));
+        ctx.beginPath(); ctx.moveTo(0, 0); ctx.quadraticCurveTo(len * 0.5, -len * 0.28 * (0.4 + 0.6 * L.t), len, 0); ctx.quadraticCurveTo(len * 0.5, len * 0.28 * (0.4 + 0.6 * L.t), 0, 0); ctx.fill();
+        ctx.restore();
+      }
+    }
+    avgTurgor = nT ? sumT / nT : 1;
+    if (ptr.active) {
+      var rg = ctx.createRadialGradient(ptr.x, ptr.y, 0, ptr.x, ptr.y, 120); rg.addColorStop(0, "rgba(240,136,74,0.28)"); rg.addColorStop(1, "rgba(240,136,74,0)"); ctx.fillStyle = rg; ctx.fillRect(ptr.x - 120, ptr.y - 120, 240, 240);
+    }
+  }
+  var hudT = document.getElementById("hudT"), hudW = document.getElementById("hudW"), hudDot = document.getElementById("hudDot");
+  function updHud() {
+    var s = 1 - avgTurgor; // 0..1 stress, scaled to measured maxima
+    var stressFrac = Math.min(1, s * 3.2);
+    hudT.textContent = "Canopy +" + (stressFrac * 6).toFixed(1) + " °C";
+    hudW.textContent = "Wilting score " + (stressFrac * 3).toFixed(1) + " / 5";
+    hudDot.style.background = stressFrac > 0.3 ? "var(--straw)" : "var(--leaf)";
+  }
+  function loop(t) {
+    if (!canopyRunning) return;
+    var dt = lastT ? Math.min(0.05, (t - lastT) / 1000) : 0.016; lastT = t;
+    drawCanopy(t, dt); updHud();
+    requestAnimationFrame(loop);
+  }
+  function startCanopy() { if (canopyRunning) return; canopyRunning = true; lastT = 0; buildCanopy(); requestAnimationFrame(loop); }
+  function stopCanopy() { canopyRunning = false; }
+  function setPtr(e) { var r = cv.getBoundingClientRect(); ptr.x = e.clientX - r.left; ptr.y = e.clientY - r.top; ptr.active = true; }
+  cv.addEventListener("pointermove", setPtr);
+  cv.addEventListener("pointerdown", setPtr);
+  cv.addEventListener("pointerleave", function () { ptr.active = false; });
+  cv.addEventListener("pointerup", function (e) { if (e.pointerType !== "mouse") ptr.active = false; });
+  cv.addEventListener("pointercancel", function () { ptr.active = false; });
+  window.addEventListener("resize", function () { if (canopyRunning) buildCanopy(); });
+
+  /* =================== SEASON SIMULATOR =================== */
+  var sc = document.getElementById("simCanvas"), sx = sc.getContext("2d"), simStress = false, simDay = 0, playing = false;
+  var S0 = 45, S1 = 115, END = 130;
+  var STAGES = [[0, "Planting"], [8, "Emergence"], [12, "Vegetative growth"], [35, "Flowering begins"], [45, "Pegging"], [55, "Pod set"], [75, "Seed fill"], [115, "Maturing"], [125, "Ready to dig"]];
+  var tl = document.getElementById("tline");
+  tl.innerHTML = '<div class="win" style="left:' + (S0 / END * 100) + '%;width:' + ((S1 - S0) / END * 100) + '%" title="Shelter window"></div>' + STAGES.slice(1).map(function (s, i) { return '<span class="tl" style="left:' + (s[0] / END * 100) + '%;top:' + (i % 2 ? 30 : 12) + 'px;height:auto">' + s[1] + '</span>'; }).join("");
+  function stressLevel(d) { // 0..1 illustrative ramp inside shelter window
+    if (!simStress || d < S0) return 0;
+    if (d <= S1) return Math.min(1, (d - S0) / 20);
+    return Math.max(0, 1 - (d - S1) / 10);
+  }
+  function stageAt(d) { var s = STAGES[0][1]; STAGES.forEach(function (x) { if (d >= x[0]) s = x[1]; }); return s; }
+  function setM(id, bar, txt, frac, hot) { document.getElementById(id).textContent = txt; var b = document.getElementById(bar); b.style.width = Math.max(0, Math.min(100, frac * 100)) + "%"; b.className = hot ? "hot" : ""; }
+  function drawSim() {
+    var r = sc.getBoundingClientRect(), dp = Math.min(2, window.devicePixelRatio || 1);
+    if (sc.width !== Math.round(r.width * dp)) { sc.width = r.width * dp; sc.height = r.height * dp; }
+    var w = r.width, h = r.height; sx.setTransform(dp, 0, 0, dp, 0, 0); sx.clearRect(0, 0, w, h);
+    var d = simDay, s = stressLevel(d), ground = h * 0.55, cx = w / 2;
+    var grow = Math.min(1, Math.max(0, (d - 6) / 70)), cumStress = 0;
+    for (var k = S0; k <= Math.min(d, S1); k++) cumStress += stressLevel(k);
+    cumStress = simStress ? Math.min(1, cumStress / 55) : 0;
+    // sky tint and sun
+    sx.fillStyle = "rgba(240,136,74," + (0.18 * s) + ")"; sx.fillRect(0, 0, w, ground);
+    sx.fillStyle = s > 0.05 ? "rgba(240,136,74,0.9)" : "rgba(234,240,230,0.85)"; sx.beginPath(); sx.arc(w - 60, 50, 16 + s * 8, 0, 6.29); sx.fill();
+    // shelter
+    if (simStress && d >= S0 && d <= S1 + 2) {
+      sx.strokeStyle = "rgba(234,240,230,0.55)"; sx.lineWidth = 2; sx.fillStyle = "rgba(234,240,230,0.08)";
+      sx.beginPath(); sx.moveTo(cx - w * 0.38, ground); sx.quadraticCurveTo(cx, ground - h * 0.95, cx + w * 0.38, ground); sx.fill(); sx.stroke();
+      sx.font = "500 11px 'JetBrains Mono', monospace"; sx.fillStyle = "rgba(240,136,74,0.95)"; sx.fillText("RAINOUT SHELTER ON", 14, 22);
+    } else if (!(simStress) || d < S0) {
+      // rain
+      if (d > 8 && d % 9 < 4 && !reduce) { sx.strokeStyle = "rgba(160,200,230,0.45)"; sx.lineWidth = 1; for (var q = 0; q < 40; q++) { var rx = (q * 53 + d * 7) % w, ry = (q * 37 + d * 13) % ground; sx.beginPath(); sx.moveTo(rx, ry); sx.lineTo(rx - 3, ry + 10); sx.stroke(); } }
+    }
+    // soil moisture shading
+    var moist = 1 - 0.6 * s * (simStress ? 1 : 0);
+    sx.fillStyle = "rgba(60,90,110," + (0.35 * moist) + ")"; sx.fillRect(0, ground, w, h - ground);
+    // plant
+    if (d >= 8) {
+      var spread = (40 + grow * Math.min(w * 0.33, 190)), height = 12 + grow * h * 0.26, wilt = Math.min(1, s * 1.1);
+      var leafCol = mix([121, 194, 127], STRAW, wilt * 0.8);
+      for (var b = 0; b < 9; b++) {
+        var side = b % 2 ? 1 : -1, frac = (b + 1) / 9, bx = cx + side * spread * frac, by = ground - height * (1 - Math.abs(frac - 0.45));
+        sx.strokeStyle = "rgba(90,140,90,0.9)"; sx.lineWidth = 1.5; sx.beginPath(); sx.moveTo(cx, ground - 4); sx.quadraticCurveTo(cx + side * spread * frac * 0.4, by - 10, bx, by + wilt * 18); sx.stroke();
+        for (var lf = 0; lf < 3; lf++) {
+          var lx = lerp(cx, bx, 0.5 + lf * 0.25), ly = lerp(ground - 4, by + wilt * 18, 0.5 + lf * 0.25);
+          sx.save(); sx.translate(lx, ly); sx.rotate(-Math.PI / 2 + side * (0.6 + wilt * 1.6) + lf * 0.2 * side);
+          sx.fillStyle = leafCol; var L2 = 12 + grow * 14; sx.beginPath(); sx.ellipse(L2 * 0.6, 0, L2 * 0.6, L2 * 0.32 * (1 - wilt * 0.5), 0, 0, 6.29); sx.fill(); sx.restore();
+        }
+        // flowers
+        if (d >= 35 && d < 100 && b % 3 === 0) { sx.fillStyle = s > 0.5 ? "rgba(230,190,90,0.5)" : "#F4C542"; sx.beginPath(); sx.arc(lerp(cx, bx, 0.45), lerp(ground - 4, by, 0.45) + 4, 3, 0, 6.29); sx.fill(); }
+      }
+      // pegs and pods underground
+      if (d >= 45) {
+        var potential = Math.min(1, (d - 45) / 50), pods = Math.round(18 * potential * (1 - 0.52 * cumStress));
+        var podFill = Math.min(1, Math.max(0, (d - 70) / 45));
+        for (var pi = 0; pi < pods; pi++) {
+          var ang = (pi / 18) * Math.PI, pr = 26 + (pi % 4) * 14, px = cx + Math.cos(ang) * spread * 0.55 * (pi % 2 ? 1 : -0.9), py = ground + 18 + (pi % 5) * 9;
+          sx.strokeStyle = "rgba(200,170,120,0.6)"; sx.lineWidth = 1; sx.beginPath(); sx.moveTo(px, ground); sx.lineTo(px, py); sx.stroke();
+          sx.fillStyle = mix([150, 120, 80], [214, 184, 132], podFill); sx.beginPath(); sx.ellipse(px, py + 4, 4 + podFill * 4, 2.5 + podFill * 2.5, 0.3, 0, 6.29); sx.fill();
+        }
+      }
+      // roots
+      sx.strokeStyle = "rgba(220,200,160,0.25)"; sx.lineWidth = 1;
+      for (var rt = 0; rt < 7; rt++) { sx.beginPath(); sx.moveTo(cx, ground); sx.quadraticCurveTo(cx + (rt - 3) * 12, ground + 40, cx + (rt - 3) * 22, ground + 30 + grow * (h - ground - 40) * (0.6 + (rt % 3) * 0.15)); sx.stroke(); }
+    } else {
+      sx.fillStyle = "#C9A66B"; sx.beginPath(); sx.ellipse(cx, ground + 14, 6, 4, 0, 0, 6.29); sx.fill();
+    }
+    sx.font = "500 11px 'JetBrains Mono', monospace"; sx.fillStyle = "rgba(234,240,230,0.6)"; sx.fillText("ILLUSTRATION · values in the gauges", 14, h - 14);
+    // meters (measured maxima x illustrative ramp)
+    document.getElementById("dayN").textContent = d;
+    var st = document.getElementById("stageN"); st.textContent = stageAt(d) + (s > 0 ? " · under stress" : ""); st.className = "st" + (s > 0 ? " hot" : "");
+    setM("mSoil", "bSoil", s ? "−" + Math.round(60 * s) + "%" : "0%", 1 - 0.6 * s, s > 0);
+    setM("mAir", "bAir", "+" + (8.5 * s).toFixed(1) + " °C", s, s > 0);
+    setM("mCan", "bCan", "+" + (6 * s).toFixed(1) + " °C", s, s > 0);
+    setM("mGs", "bGs", s ? "−" + Math.round(69 * s) + "%" : "0%", 1 - 0.69 * s, s > 0);
+    setM("mWilt", "bWilt", (2.5 * s).toFixed(1), 2.5 * s / 5, s > 0);
+    if (d >= 125) { var yl = simStress ? 52 : 0; setM("mYield", "bYield", simStress ? "−52%  (6.4 → 3.1 t/ha)" : "6.4 t/ha baseline", 1 - yl / 100, simStress); }
+    else setM("mYield", "bYield", "at harvest", 0, false);
+  }
+  var dayInput = document.getElementById("day");
+  dayInput.addEventListener("input", function () { simDay = +this.value; drawSim(); });
+  function setTreat(stress) { simStress = stress; document.getElementById("tRain").setAttribute("aria-pressed", String(!stress)); document.getElementById("tStress").setAttribute("aria-pressed", String(stress)); drawSim(); }
+  document.getElementById("tRain").onclick = function () { setTreat(false); };
+  document.getElementById("tStress").onclick = function () { setTreat(true); };
+  var playBtn = document.getElementById("play"), playT = null;
+  playBtn.onclick = function () {
+    if (playing) { playing = false; playBtn.textContent = "▶ Play season"; return; }
+    playing = true; playBtn.textContent = "❚❚ Pause"; if (simDay >= END) simDay = 0;
+    var last = 0;
+    function tick(t) { if (!playing) return; if (!last) last = t; if (t - last > (reduce ? 120 : 45)) { last = t; simDay++; dayInput.value = simDay; drawSim(); if (simDay >= END) { playing = false; playBtn.textContent = "▶ Replay"; return; } } requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  };
+  window.addEventListener("resize", function () { if (current === "season") drawSim(); });
+
+  /* =================== ROUTER =================== */
+  var PAGES = ["home", "research", "corn-window", "combined-stress", "drone-wilting", "stress-economics", "season", "impact", "publications", "gallery", "outreach", "contact"];
+  var NAVMAP = { "corn-window": "research", "combined-stress": "research", "drone-wilting": "research", "stress-economics": "research" };
+  var current = null;
+  function route() {
+    var h = (location.hash || "").replace("#", "");
+    if (PAGES.indexOf(h) < 0) h = "home";
+    if (h === current) return;
+    current = h;
+    document.querySelectorAll(".page").forEach(function (p) { p.classList.toggle("active", p.getAttribute("data-page") === h); });
+    var navKey = NAVMAP[h] || h;
+    document.querySelectorAll("#navLinks a").forEach(function (a) { if (a.getAttribute("data-for") === navKey) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    document.getElementById("navLinks").classList.remove("open"); document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
+    window.scrollTo(0, 0);
+    var pg = document.getElementById("p-" + h);
+    if (h === "home") { startCanopy(); countUp(pg); } else stopCanopy();
+    if (h === "impact") { countUp(pg); growBars(document.getElementById("fwci").parentNode); renderYield(); }
+    if (h === "drone-wilting") growBars(document.getElementById("r2panel"));
+    if (h === "season") { requestAnimationFrame(drawSim); }
+    var t = { home: "Ranadheer Vennam, Ph.D., Research Portfolio" }[h];
+    document.title = t || (pg.querySelector("h1") ? pg.querySelector("h1").textContent + " · R. R. Vennam" : "R. R. Vennam");
+  }
+  window.addEventListener("hashchange", route);
+  document.getElementById("menuBtn").onclick = function () { var l = document.getElementById("navLinks"); var o = l.classList.toggle("open"); this.setAttribute("aria-expanded", String(o)); };
+  document.getElementById("copyEmail").onclick = function () {
+    var msg = document.getElementById("copyMsg");
+    try { navigator.clipboard.writeText("ranadheerv@vt.edu").then(function () { msg.textContent = "Copied."; }, function () { msg.textContent = "Copy blocked here: the address is ranadheerv@vt.edu"; }); }
+    catch (e) { msg.textContent = "Copy blocked here: the address is ranadheerv@vt.edu"; }
+  };
+  route();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (current === "season") drawSim(); });
+})();
+</script>
+</body>
+</html>
