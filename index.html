@@ -116,6 +116,61 @@ section.band { padding: clamp(48px, 7vw, 96px) 0; border-bottom: 1px solid var(-
 .hint { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-3); }
 .hint b { color: var(--heat); font-weight: 500; }
 
+
+/* video hero */
+.vhero { position: relative; min-height: min(92vh, 860px); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; border-bottom: 1px solid var(--line); background: #0B110D; }
+.vhero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vhero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,12,9,0.9) 0%, rgba(8,12,9,0.7) 40%, rgba(8,12,9,0.2) 75%, rgba(8,12,9,0.1) 100%), linear-gradient(0deg, rgba(8,12,9,0.9) 0%, rgba(8,12,9,0) 50%), linear-gradient(180deg, rgba(8,12,9,0.5) 0%, rgba(8,12,9,0) 25%); }
+.vhero > .wrap { width: 100%; }
+.vhero-copy { position: relative; padding-top: 120px; padding-bottom: 28px; }
+.vhero h1 { font-family: var(--font-display); font-weight: 800; font-stretch: 72%; font-size: clamp(2.8rem, 6.4vw, 5.6rem); line-height: 0.96; letter-spacing: -0.015em; margin-top: 14px; text-shadow: 0 2px 30px rgba(0,0,0,0.35); }
+.vhero h1 .l2 { color: var(--leaf); }
+.vhero h1 .phd { display: inline-block; font-family: var(--font-mono); font-weight: 400; font-size: 0.2em; letter-spacing: 0.06em; color: var(--ink); border: 1px solid rgba(255,255,255,0.35); border-radius: 3px; padding: 0.25em 0.5em; vertical-align: 0.9em; margin-left: 0.35em; text-shadow: none; }
+.vhero .kicker { color: rgba(236,240,232,0.8); }
+.vhero .thesis { font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.42; max-width: 38ch; margin-top: 22px; color: var(--ink); }
+.vhero .thesis b { color: var(--heat); font-weight: 600; }
+.btn.glass { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.vhero-foot { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 14px; padding-bottom: 22px; }
+.vhero-foot::before { content: ""; position: absolute; top: 0; left: var(--gutter); right: var(--gutter); border-top: 1px solid rgba(255,255,255,0.14); }
+.vcap { flex: 1 1 auto; font-family: var(--font-mono); font-size: 0.7rem; color: rgba(236,240,232,0.78); display: flex; align-items: center; gap: 10px; min-width: 0; }
+.vcap .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--heat); flex: none; animation: pulse 2s infinite; }
+#vcapT { transition: opacity .4s; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@keyframes pulse { 50% { opacity: .3; } }
+.reel-btn { flex: none; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.3); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.reel-btn:hover { border-color: var(--leaf); }
+.reel-btn .ic { width: 8px; height: 10px; border-left: 3px solid currentColor; border-right: 3px solid currentColor; }
+.reel-btn[aria-pressed="true"] .ic { width: 0; height: 0; border: 0; border-left: 9px solid currentColor; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.scroll-cue { position: absolute; left: 50%; bottom: 76px; width: 22px; height: 34px; margin-left: -11px; border: 1.5px solid rgba(255,255,255,0.5); border-radius: 12px; }
+.scroll-cue span { position: absolute; left: 50%; top: 7px; width: 3px; height: 7px; margin-left: -1.5px; background: #fff; border-radius: 2px; animation: cue 1.8s infinite; }
+@keyframes cue { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(10px); } }
+/* about split */
+.about-grid { display: grid; grid-template-columns: minmax(240px, 400px) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.about-photo { margin: 0; }
+.about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 55% 35%; border-radius: 6px; }
+.about-photo figcaption { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-3); margin-top: 10px; }
+.lede-s { color: var(--ink-2); font-size: 1.08rem; line-height: 1.6; margin-top: 16px; max-width: 58ch; }
+/* parallax band */
+.pband { position: relative; overflow: hidden; min-height: 70vh; display: flex; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pband-img { position: absolute; left: 0; top: -15%; width: 100%; height: 130%; object-fit: cover; will-change: transform; }
+.pband-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,12,9,0.88), rgba(8,12,9,0.45)); }
+.pband > .wrap { width: 100%; }
+.pband-copy { position: relative; padding-top: 80px; padding-bottom: 80px; }
+.pband .q { font-family: var(--font-body); font-style: italic; font-size: clamp(1.5rem, 3vw, 2.4rem); line-height: 1.3; max-width: 30ch; }
+.pband .mono { font-family: var(--font-mono); font-size: 0.7rem; color: rgba(236,240,232,0.7); margin: 18px 0 24px; }
+.tryit #canopy { margin-top: 20px; }
+/* scroll reveal */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s ease, transform .9s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } .scroll-cue span, .vcap .dot { animation: none; } }
+@media (max-width: 760px) {
+  .vhero { min-height: 88vh; }
+  .vhero-shade { background: linear-gradient(0deg, rgba(8,12,9,0.94) 0%, rgba(8,12,9,0.7) 55%, rgba(8,12,9,0.4) 100%); }
+  .scroll-cue { display: none; }
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-photo img { aspect-ratio: 4 / 3; }
+  .pband { min-height: 60vh; }
+}
+
 /* plot-flag tags */
 .tag { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 0.72rem; padding: 6px 12px 6px 10px; background: var(--soil-2); border: 1px solid var(--line); border-radius: 3px; color: var(--ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .tag i { font-style: normal; width: 8px; height: 8px; border-radius: 50%; background: var(--leaf); }
@@ -393,31 +448,24 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
 
 <!-- =================== HOME =================== -->
 <section class="page" id="p-home" data-page="home">
-  <div class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="kicker enter">Crop stress physiologist · Virginia Tech</p>
-        <h1 class="enter">Ranadheer Reddy <span class="l2">Vennam</span><span class="phd">Ph.D.</span></h1>
-        <p class="role enter">Research Assistant, Tidewater Agricultural Research and Extension Center</p>
-        <p class="thesis enter">A season’s yield is decided in a few weeks around flowering. I study what <b>heat and drought</b> do in that window, what they cost growers, and how to see the damage from the air.</p>
-        <div class="cta enter">
-          <a class="btn primary" href="#research">Explore the research</a>
-          <a class="btn" href="#season">Run a stress season</a>
-          <a class="btn ghost" href="#contact">Contact</a>
-        </div>
+  <div class="vhero">
+    <video id="reel" muted loop playsinline preload="auto" poster="img/reel-poster.jpg" aria-hidden="true">
+      <source src="img/reel.webm" type="video/webm">
+      <source src="img/reel.mp4" type="video/mp4">
+    </video>
+    <div class="vhero-shade"></div>
+    <div class="wrap vhero-copy">
+      <p class="kicker enter">Crop stress physiologist · Virginia Tech</p>
+      <h1 class="enter">Ranadheer Reddy <span class="l2">Vennam</span><span class="phd">Ph.D.</span></h1>
+      <p class="thesis enter">A season’s yield is decided in a few weeks around flowering. I study what <b>heat and drought</b> do in that window, what they cost growers, and how to see the damage from the air.</p>
+      <div class="cta enter">
+        <a class="btn primary" href="#research">Explore the research</a>
+        <a class="btn glass" href="#season">Run a stress season</a>
       </div>
-      <figure class="hero-photo enter">
-        <img src="img/phd/portrait-peanut-pods.jpg" alt="Ranadheer holding a freshly dug peanut plant covered in pods" width="900" height="1200">
-        <figcaption>Checking pod set on a dug peanut plant, Ph.D. field trials.</figcaption>
-      </figure>
     </div>
-    <canvas id="canopy" aria-label="Interactive canopy. Moving the pointer over the plants heats them and their leaves wilt; they recover when the pointer leaves." role="img"></canvas>
-    <div class="wrap canopy-bar">
-      <p class="hint">Move across the canopy to add <b>heat</b>. Leaves wilt, then recover.</p>
-      <div class="hud" aria-live="off">
-        <span class="tag hot"><i></i><span id="hudT">Canopy +0.0 °C</span></span>
-        <span class="tag"><i id="hudDot"></i><span id="hudW">Wilting score 0.0 / 5</span></span>
-      </div>
+    <div class="wrap vhero-foot">
+      <p class="vcap" id="vcap" aria-live="off"><span class="dot"></span><span id="vcapT">Movable rainout shelters over the 2024 peanut trial</span></p>
+      <button class="reel-btn" id="reelBtn" type="button" aria-pressed="false" aria-label="Pause background video"><span class="ic"></span><span class="lb">Pause</span></button>
     </div>
   </div>
 
@@ -431,11 +479,53 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     </div>
   </div>
 
+  <section class="band about reveal">
+    <div class="wrap about-grid">
+      <figure class="about-photo">
+        <img src="img/phd/portrait-peanut-pods.jpg" alt="Ranadheer holding a freshly dug peanut plant covered in pods" width="900" height="1200" loading="lazy">
+        <figcaption>Checking pod set on a dug peanut plant, Ph.D. field trials.</figcaption>
+      </figure>
+      <div class="about-copy">
+        <p class="kicker">Field first</p>
+        <h2 class="h2" style="margin-top:12px">Research that starts in the plot and ends with the grower</h2>
+        <p class="lede-s">I am a Research Assistant at Virginia Tech’s Tidewater Agricultural Research and Extension Center. My work follows one thread across corn, soybean, cotton, and peanut: what heat and drought do around flowering, and how much that costs.</p>
+        <p class="lede-s">Movable rainout shelters let me impose a hot, dry mid-season on purpose. Drone imagery lets me see it across thousands of plots. Yield, grade, and net returns turn it into dollars per acre.</p>
+        <div class="cta"><a class="btn" href="#research">See the research timeline</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+      </div>
+    </div>
+  </section>
+
   <section class="band">
     <div class="wrap">
       <p class="kicker">Four questions, asked in sequence</p>
       <h2 class="h2" style="margin-top:12px">From when stress hits to what it costs</h2>
       <div class="cards" id="homeCards"></div>
+    </div>
+  </section>
+
+  <section class="pband" aria-label="Aerial view of the 2024 stress trial">
+    <img class="pband-img" src="img/aerial-trial-2024.jpg" alt="" loading="lazy">
+    <div class="pband-shade"></div>
+    <div class="wrap pband-copy reveal">
+      <p class="q">“Peanut pods form underground, so canopy wilting is one of the few visible signs of reproductive stress.”</p>
+      <p class="mono">Drone image of the 2024 trial, 70 days into stress · VCE SPES-672</p>
+      <a class="btn glass" href="#drone-wilting">How a drone scores it</a>
+    </div>
+  </section>
+
+  <section class="band tryit reveal">
+    <div class="wrap">
+      <p class="kicker">Try it</p>
+      <h2 class="h2" style="margin-top:12px">Heat the canopy</h2>
+      <p class="lede-s" style="max-width:60ch">Move across the plants to add heat. Leaves lose turgor and fold, then recover when the heat passes. The readout scales to the maxima measured in my trials.</p>
+    </div>
+    <canvas id="canopy" aria-label="Interactive canopy. Moving the pointer over the plants heats them and their leaves wilt; they recover when the pointer leaves." role="img"></canvas>
+    <div class="wrap canopy-bar">
+      <p class="hint">Move across the canopy to add <b>heat</b>. Leaves wilt, then recover.</p>
+      <div class="hud" aria-live="off">
+        <span class="tag hot"><i></i><span id="hudT">Canopy +0.0 °C</span></span>
+        <span class="tag"><i id="hudDot"></i><span id="hudW">Wilting score 0.0 / 5</span></span>
+      </div>
     </div>
   </section>
 
@@ -1111,6 +1201,30 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     });
   }
 
+
+  /* =================== VIDEO REEL =================== */
+  var reel = document.getElementById("reel"), reelBtn = document.getElementById("reelBtn"), vcapT = document.getElementById("vcapT"), userPaused = !!reduce;
+  var REELCAP = ["Movable rainout shelters over the 2024 peanut trial", "Sampling plants beside the rainout shelters", "Drone imaging of the peanut trials", "Drone view of the 2024 trial, 70 days into stress", "In-season canopy measurements", "Tagging and scoring peanut plants", "Checking open bolls in a cotton field at harvest", "Harvesting plots by hand"], REELSEG = 4;
+  function setReelBtn() { reelBtn.setAttribute("aria-pressed", String(userPaused)); reelBtn.querySelector(".lb").textContent = userPaused ? "Play" : "Pause"; reelBtn.setAttribute("aria-label", (userPaused ? "Play" : "Pause") + " background video"); }
+  function playReel() { if (!userPaused) { var pr = reel.play(); if (pr && pr.catch) pr.catch(function () {}); } }
+  reelBtn.onclick = function () { userPaused = !userPaused; setReelBtn(); if (userPaused) reel.pause(); else playReel(); };
+  var lastCap = -1;
+  reel.addEventListener("timeupdate", function () {
+    if (!window.REELCAP_OFF) {
+      var i = Math.min(REELCAP.length - 1, Math.floor((reel.currentTime + 0.5) / REELSEG));
+      if (i !== lastCap) { lastCap = i; vcapT.style.opacity = 0; setTimeout(function () { vcapT.textContent = REELCAP[i]; vcapT.style.opacity = 1; }, 300); }
+    }
+  });
+  setReelBtn();
+  /* scroll reveal + parallax */
+  var revObs = "IntersectionObserver" in window ? new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); } }); }, { threshold: 0.15 }) : null;
+  document.querySelectorAll(".reveal").forEach(function (el) { if (revObs) revObs.observe(el); else el.classList.add("in"); });
+  var pimg = document.querySelector(".pband-img");
+  if (!reduce && pimg) window.addEventListener("scroll", function () {
+    var r = pimg.parentNode.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+    var k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight; pimg.style.transform = "translateY(" + (k * -12) + "%)";
+  }, { passive: true });
+
   /* =================== HERO CANOPY =================== */
   var cv = document.getElementById("canopy"), ctx = cv.getContext("2d"), plants = [], W = 0, H = 0, dpr = 1;
   var ptr = { x: -9999, y: -9999, active: false }, canopyRunning = false, lastT = 0, avgTurgor = 1;
@@ -1297,7 +1411,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wr
     document.getElementById("navLinks").classList.remove("open"); document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
     window.scrollTo(0, 0);
     var pg = document.getElementById("p-" + h);
-    if (h === "home") { startCanopy(); countUp(pg); } else stopCanopy();
+    if (h === "home") { startCanopy(); countUp(pg); playReel(); } else { stopCanopy(); reel.pause(); }
     if (h === "impact") { countUp(pg); renderYield(); }
     if (h === "drone-wilting") growBars(document.getElementById("r2panel"));
     if (h === "season") { requestAnimationFrame(drawSim); }
